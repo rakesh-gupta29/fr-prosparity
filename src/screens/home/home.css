@@ -1,0 +1,35 @@
+.banner-text-gradient {
+  background-image: linear-gradient(180deg, #fff 17.89%, #3af779 233.81%);
+}
+
+.products-wrapper {
+  background: linear-gradient(
+    180deg,
+    #efffea 0%,
+    rgba(229, 232, 236, 0.71) 100%
+  );
+}
+
+.products-text-gradient {
+  background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
+}
+
+.product-card-wrapper {
+  background: linear-gradient(180deg, #fff 24.47%, rgba(255, 255, 255, 0));
+  box-shadow: 10px 40px 68.8px 20px rgba(135, 135, 135, 0.11);
+}
+.what-we-do-wrapper .title {
+  background-image: linear-gradient(180deg, #fff 17.89%, #3af779 233.81%);
+}
+
+.features-wrapper .title {
+  background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
+}
+
+.features-wrapper .pointers-title {
+  background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
+}
+
+.problems-wrapper .title {
+  background-image: linear-gradient(180deg, #fff 17.89%, #3af779 170.15%);
+}

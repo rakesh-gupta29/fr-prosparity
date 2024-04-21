@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
 const sizeMap = {
@@ -71,12 +71,19 @@ export function MasterAnchor({
   size = 'base',
   href,
   target,
+  children,
   ...rest
-}: MasterAnchorProps) {
+}: MasterAnchorProps & { children?: ReactNode }) {
   const sizeClass: string = sizeMap[size]
   return (
-    <Link to={href} target={target} {...rest} className={`${sizeClass} `}>
+    <Link
+      to={href}
+      target={target}
+      {...rest}
+      className={`${sizeClass} border-1 border-solid border-white rounded-full flex items-center gap-3  py-3 pr-3 pl-6 transition-colors  duration-500 ease-in-out  hover:bg-white hover:text-darkGreen text-white font-medium capitalize group`}
+    >
       {text}
+      {children}
     </Link>
   )
 }

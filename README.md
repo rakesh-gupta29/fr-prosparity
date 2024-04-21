@@ -44,3 +44,8 @@ You can view the development server at `localhost:3000`.
 ## [](https://github.com/rakesh-gupta29/boilerplates/tree/main/react-ts#license)License
 
 MIT
+
+key achievements
+progress - designs and templates the adding, checking with aws thing, icons and assets for this
+risk and obstacles -
+mitigations - problems i am facing, real time approvals

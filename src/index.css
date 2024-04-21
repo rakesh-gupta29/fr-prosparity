@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'bold';
+  src: url('assets/fonts/bold.woff2');
+}
+
+@font-face {
+  font-family: 'medium';
+  src: url('assets/fonts/medium.woff2');
+}
+
+@font-face {
+  font-family: 'light';
+  src: url('assets/fonts/light.woff2');
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url('assets/fonts/regular.woff2');
+}
+
 @layer components {
   .d {
     @apply border-2 border-red-900 border-solid;

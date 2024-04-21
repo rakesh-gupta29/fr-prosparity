@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 const sizeMap = {
   small: 'text-sm',
@@ -21,18 +21,26 @@ export function MasterBtn<T extends 'submit' | 'button'>({
   type,
   text,
   size,
+  children,
+  variant = 'dark',
   isDisabled,
   ...rest
-}: MasterBtnProps<T>) {
+}: MasterBtnProps<T> & { children?: ReactNode; variant?: 'light' | 'dark' }) {
   const sizeClass: string = sizeMap[size]
+
+  const variantClass =
+    variant === 'light'
+      ? 'border-white hover:bg-white hover:text-darkGreen text-white '
+      : ' border-darkGreen hover:bg-darkGreen hover:text-white text- darkGreen '
   return (
     <button
       disabled={isDisabled}
       {...rest}
       type={type === 'button' ? 'button' : 'submit'}
-      className={`  ${sizeClass} `}
+      className={`${sizeClass} ${variantClass} border-1 border-solid  rounded-full flex items-center gap-3  py-3 pr-3 pl-6 transition-colors  duration-500 ease-in-out   font-medium capitalize group`}
     >
       {text}
+      {children}
     </button>
   )
 }

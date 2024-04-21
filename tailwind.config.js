@@ -16,17 +16,21 @@ module.exports = {
     },
     extend: {
       colors: {
-        dark: '#010101',
-        blue: '#0080FF',
-        darkBlue: '#3293F3',
-        dark: '#232324',
-        gray: '#A9A9A9',
-        lightGray: '#f2f2f3',
-        red: '#ce4f51',
-        purple: '#8c54fb',
+        darkGreen: '#001C06',
+        lightGreen: '#3AF779',
+        borderCream: '#FFD8C2',
+        greenChip: 'rgba(248, 235, 191, 0.40)',
+        creamChip: 'rgba(248, 235, 191, 0.40)',
+        gray: '#9E9E9E',
       },
       borderWidth: {
         1: '1px',
+      },
+      fontFamily: {
+        bold: ['bold', 'sans-serif'],
+        light: ['light', 'sans-serif'],
+        regular: ['regular', 'sans-serif'],
+        medium: ['medium', 'sans-serif'],
       },
       gridColumn: {},
       animation: {

@@ -12,19 +12,19 @@ export default function Products() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container ">
-        <article className=" rounded-[28px]  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[500px] overflow-hidden product-card-wrapper">
+        <article className=" rounded-[28px]  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[590px] overflow-hidden product-card-wrapper two_wheeler-card">
           <div className="flex flex-col gap-3">
             <span className="text-3xl font-medium text-black leading-tight">
-              Electric 2 Wheeler
+              Electric 3 Wheeler
             </span>
             <span className="text-base md:text-lg xl:text-xl max-w-[450px] font-regular font-normal leading-snug">
-              Avail loans for reliable and convenient electric scooters for
-              urban and rural commuting.
+              Get loans for efficient and eco-friendly options for last-mile
+              transportation needs.
             </span>
           </div>
         </article>
 
-        <article className=" rounded-[28px]  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[500px] overflow-hidden product-card-wrapper">
+        <article className=" rounded-[28px]  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[590px] overflow-hidden product-card-wrapper three_wheeler-card">
           <div className="flex flex-col gap-3">
             <span className="text-3xl font-medium text-black leading-tight">
               Electric 2 Wheeler

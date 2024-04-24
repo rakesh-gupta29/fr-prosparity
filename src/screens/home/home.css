@@ -3,11 +3,13 @@
 }
 
 .products-wrapper {
+  background: #fbf9f9;
+  /* 
   background: linear-gradient(
     180deg,
     #efffea 0%,
     rgba(229, 232, 236, 0.71) 100%
-  );
+  ); */
 }
 
 .products-text-gradient {
@@ -19,7 +21,7 @@
   box-shadow: 10px 40px 68.8px 20px rgba(135, 135, 135, 0.11);
 }
 .what-we-do-wrapper .title {
-  background-image: linear-gradient(180deg, #fff 17.89%, #3af779 233.81%);
+  background-image: linear-gradient(180deg, #001c06 17.89%, #3af779 345.63%);
 }
 
 .features-wrapper .title {
@@ -32,4 +34,69 @@
 
 .problems-wrapper .title {
   background-image: linear-gradient(180deg, #fff 17.89%, #3af779 170.15%);
+}
+
+.tab-active {
+  border: 1px solid #3bfe7b;
+  background-color: #004737 !important;
+
+  color: #3bfe7b !important;
+}
+
+.what-we-do-wrapper {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.8) -1.97%,
+    rgba(255, 255, 255, 0.68) 112.59%
+  );
+  box-shadow: 0px 24px 60.5px -10px #fff inset,
+    10px 16px 68.8px 20px rgba(135, 135, 135, 0.21);
+  backdrop-filter: blur(38px);
+}
+
+.contact-us-wrapper {
+  background-image: radial-gradient(
+      70% 40% at center top,
+      #009b9e71,
+      #009b9e36,
+      #009b9e11
+    ),
+    linear-gradient(to bottom, #051c1f, #051c1f);
+}
+
+/* .three_wheeler-card {
+  background-image: url('assets/threeWheeler.png');
+} */
+
+.two_wheeler-card {
+  background-image: url('assets/two_wheeler.png');
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.three_wheeler-card {
+  background-image: url('assets/three_wheeler.png');
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.offering-wrapper .title {
+  background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
+}
+
+.offering-wrapper .tab-wrapper {
+  border: 1px solid #fff;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.07) -1.97%,
+    rgba(255, 255, 255, 0.06) 112.59%
+  );
+  box-shadow: 11.36px 1px 78.156px 22.72px rgba(135, 135, 135, 0.21);
+  backdrop-filter: blur(43px);
+}
+
+.offering-wrapper .carousel-title {
+  background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
 }

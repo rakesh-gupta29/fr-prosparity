@@ -2,13 +2,13 @@ import React from 'react'
 
 export default function Problems() {
   return (
-    <section className="bg-darkGreen">
+    <section className="bg-blueGreen">
       <div className="grid w-container  problems-wrapper  blade-top-padding blade-bottom-padding-sm ">
         <div className="blade-top-padding-lg blade-bottom-padding-lg">
           <div className="grid place-content-start">
             <div className="p-[10px] rounded-full bg-greenChip">
               <span className="text-3xl text-white font-medium px-4">
-                What problem are we solving?
+                Sustainability
               </span>
             </div>
           </div>

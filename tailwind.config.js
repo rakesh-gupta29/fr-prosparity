@@ -22,6 +22,7 @@ module.exports = {
         greenChip: 'rgba(248, 235, 191, 0.40)',
         creamChip: 'rgba(248, 235, 191, 0.40)',
         gray: '#9E9E9E',
+        blueGreen: '#061C23',
       },
       borderWidth: {
         1: '1px',

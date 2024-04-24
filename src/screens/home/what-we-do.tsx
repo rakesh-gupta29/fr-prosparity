@@ -1,35 +1,47 @@
 import React from 'react'
 import check from 'assets/what-we-do.png'
+import { MasterAnchor } from 'atoms/links'
 
 export default function WhatWeDo() {
   return (
-    <section className="bg-darkGreen what-we-do-wrapper blade-top-padding-lg blade-bottom-padding-lg ">
-      <div className="grid grid-cols-1 w-container lg:grid-cols-2 gap-x-40  blade-top-padding blade-bottom-padding">
-        <div>
-          <img src={check} alt="" />
-        </div>
-        <div className="flex flex-col  justify-center py-5 items-start gap-3">
-          <div className="p-[10px] rounded-full bg-greenChip">
-            <span className="text-3xl text-white font-medium px-4">
-              What do we do
-            </span>
+    <section className="blade-top-padding-lg blade-top-padding-lg">
+      <section className="blade-top-padding-lg blade-bottom-padding-lg">
+        <section className="what-we-do-wrapper rounded-[40px] w-container  overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-24 blade-top-padding p-2  blade-bottom-padding">
+            <div className="h-[300px]  md:h-[400px] xl:h-[550px] 2xl:h-[680px]">
+              <img
+                src={check}
+                alt="illustration showing the problems we solve"
+                className="h-full w-full object-contain object-center"
+              />
+            </div>
+            <div className="flex flex-col justify-center py-5 items-start">
+              <div className="p-[10px] rounded-full bg-greenChip">
+                <span className="text-3xl text-black font-medium px-4">
+                  What do we do
+                </span>
+              </div>
+              <span className="text-3xl title  font-medium text-transparent bg-clip-text pb-8 pt-10 ">
+                Ride the electric wave
+              </span>
+              <span className="text-lg md:text-xl 2xl:text-2xl text-black leading-tight font-light  tracking-[0.24px]  pb-5 max-w-md ">
+                At ProsParity, we focus on{' '}
+                <strong className="font-regular">
+                  financing solutions for purchasing, managing, distributing,
+                  and manufacturing two-wheeler and three-wheeler EVs.
+                </strong>
+              </span>
+              <span className="text-lg md:text-xl 2xl:text-2xl text-black leading-tight font-light tracking-[0.24px]  max-w-lg ">
+                Drivers financed by us use their vehicles for passenger
+                transportation, e-commerce, and cargo deliveries.
+              </span>
+              <div>
+                <MasterAnchor href="#contact" text="Contact Us" />
+              </div>
+            </div>
           </div>
-          <span className="text-6xl title  font-medium text-transparent bg-clip-text ">
-            Ride the electric wave
-          </span>
-          <span className="text-lg md:text-xl 2xl:text-2xl text-white leading-tight font-light  tracking-[0.24px]  max-w-md ">
-            At ProsParity, we focus on{' '}
-            <strong className="font-regular">
-              financing solutions for purchasing, managing, distributing, and
-              manufacturing two-wheeler and three-wheeler EVs.
-            </strong>
-          </span>
-          <span className="text-lg md:text-xl 2xl:text-2xl text-white leading-tight font-light tracking-[0.24px]  max-w-lg ">
-            Drivers financed by us use their vehicles for passenger
-            transportation, e-commerce, and cargo deliveries.
-          </span>
-        </div>
-      </div>
+        </section>
+      </section>
     </section>
   )
 }

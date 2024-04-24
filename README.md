@@ -45,7 +45,13 @@ You can view the development server at `localhost:3000`.
 
 MIT
 
-key achievements
-progress - designs and templates the adding, checking with aws thing, icons and assets for this
-risk and obstacles -
-mitigations - problems i am facing, real time approvals
+Profile summary:
+
+-
+
+Worked as lead developer for 8 out of 12 projects collaborating with design and other teams
+– Frontend: React, NextJS, SvelteKit, AstroJS, GSAP, Framer Motion, Redux, React Query
+– Platforms: AWS (S3, Amplify), DigitalOcean, Netlify, Vercel, GitHub Pages
+– Platforms: AWS (S3, Amplify), DigitalOcean, Netlify, Vercel, GitHub Pages
+– Backend: Laravel, Golang, Firebase, GraphCMS
+– Design: Figma, Prototypes, UI/UX design, Design system

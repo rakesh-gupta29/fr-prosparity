@@ -9,13 +9,13 @@ export default function Hero() {
   return (
     <section className="min-h-screen bg-[#08272B] blade-top-padding-lg">
       <div className="text-center grid place-content-center place-items-center gap-4 blade-top-padding-sm blade-top-margin-sm ">
-        <span className="banner-text-gradient bg-clip-text text-transparent text-6xl font-medium px-2">
+        <span className="banner-text-gradient bg-clip-text text-transparent text-6xl animate-appear opacity-0 -translate-y-2 font-medium px-2">
           Accelerating EV financing{' '}
         </span>
-        <span className="text-2xl font-regular text-white px-2 leading-tight">
+        <span className="text-2xl font-regular text-white px-2 leading-tight animate-appear-100 opacity-0 -translate-y-2  ">
           Driving India’s largest financing platform in electric mobility space
         </span>
-        <div className="pt-10 flex items-center">
+        <div className="pt-10 flex items-center animate-appear-300 opacity-0 -translate-y-2 ">
           <div>
             <img
               src={twoWheeler}

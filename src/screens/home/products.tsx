@@ -4,15 +4,21 @@ import React from 'react'
 export default function Products() {
   const handleClick = () => console.log('contact us btn clicked')
   return (
-    <section className="products-wrapper blade-top-padding-lg blade-bottom-padding-lg ">
-      <div className="pb-[72px]">
+    <section className=" bg-[#FBF9F9] blade-top-padding-lg blade-bottom-padding-sm ">
+      <div
+        className="pb-[72px] text-wrapper"
+        data-aos="appear-down"
+        data-aos-offset="400"
+        data-aos-duration="400"
+        data-aos-easing="ease-in-out"
+      >
         <h3 className="text-center  products-text-gradient text-transparent bg-clip-text font-medium px-2  ">
           Our Products
         </h3>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container ">
-        <article className=" rounded-[28px]  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[590px] overflow-hidden product-card-wrapper two_wheeler-card">
+        <article className=" rounded-[28px]  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[590px] overflow-hidden product-card-wrapper two_wheeler-card">
           <div className="flex flex-col gap-3">
             <span className="text-3xl font-medium text-black leading-tight">
               Electric 3 Wheeler
@@ -21,10 +27,20 @@ export default function Products() {
               Get loans for efficient and eco-friendly options for last-mile
               transportation needs.
             </span>
+            <div className="grid place-content-start pt-7 ">
+              <button
+                type="button"
+                onClick={handleClick}
+                className="rounded-full py-3 px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
+               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+              >
+                Contact us
+              </button>
+            </div>
           </div>
         </article>
 
-        <article className=" rounded-[28px]  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[590px] overflow-hidden product-card-wrapper three_wheeler-card">
+        <article className=" rounded-[28px]   p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[590px] overflow-hidden product-card-wrapper three_wheeler-card  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  ">
           <div className="flex flex-col gap-3">
             <span className="text-3xl font-medium text-black leading-tight">
               Electric 2 Wheeler
@@ -33,12 +49,22 @@ export default function Products() {
               Avail loans for reliable and convenient electric scooters for
               urban and rural commuting.
             </span>
+            <div className="grid place-content-start pt-7 ">
+              <button
+                type="button"
+                onClick={handleClick}
+                className="rounded-full py-3 px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
+               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+              >
+                Contact us
+              </button>
+            </div>
           </div>
         </article>
       </div>
 
-      <div className="lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container ">
-        <article className="h-[550px]  flex flex-col gap-y-5 product-card-wrapper  rounded-[28px]  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12 ">
+      <div className="lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container pt-10  ">
+        <article className="h-[550px]  flex flex-col gap-y-5 product-card-wrapper   hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0   rounded-[28px] dealership-wrapper    p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12 ">
           <div className="flex flex-col gap-3 flex-1 ">
             <span className="text-3xl font-medium text-black leading-tight">
               Dealer Financing:
@@ -48,31 +74,16 @@ export default function Products() {
               empower dealers to grow their businesses while fostering strong,
               mutually beneficial relationships.
             </span>
-          </div>
-          <div className="flex-0">
-            <MasterBtn
-              text="Contact us"
-              size="large"
-              type="button"
-              onClick={handleClick}
-            >
-              <div className="h-7 w-7 group-hover:bg-lightGreen group-hover:stroke-black transition-colors stroke-lightGreen duration-500 ease-in-out bg-black grid place-content-center place-items-center p-px rounded-full">
-                <svg
-                  width="10"
-                  height="13"
-                  viewBox="0 0 12 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.35449 2.08887L9.88974 6.81298C10.3969 7.13094 10.3969 7.86985 9.88974 8.18782L2.35449 12.9119"
-                    stroke="inherit"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-            </MasterBtn>
+            <div className="grid place-content-start pt-7 ">
+              <button
+                type="button"
+                onClick={handleClick}
+                className="rounded-full py-3 px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
+               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+              >
+                Contact us
+              </button>
+            </div>
           </div>
         </article>
       </div>

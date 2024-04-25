@@ -55,3 +55,7 @@ Worked as lead developer for 8 out of 12 projects collaborating with design and 
 – Platforms: AWS (S3, Amplify), DigitalOcean, Netlify, Vercel, GitHub Pages
 – Backend: Laravel, Golang, Firebase, GraphCMS
 – Design: Figma, Prototypes, UI/UX design, Design system
+
+- profile url for both team members
+- og image and favicon
+- mission and vision design

@@ -15,10 +15,10 @@ export default function PageHome() {
     <>
       <Hero />
       <Products />
-      <Offerings />
-      <Problems />
       <WhatWeDo />
+      <Offerings />
       <Features />
+      <Problems />
       <Teams />
       <ContactUs />
     </>

@@ -46,39 +46,61 @@ export default function Header() {
     })
   }, [])
 
+  const handleClick = () => {}
+
   return (
     <header
       ref={headerWrapperRef}
       className={`   ${
-        isNavFixed ? 'bg-white' : 'bg-transparent'
-      }  fixed left-0 top-0 right-0 h-20`}
+        isNavFixed ? 'bg-blueGreen' : 'bg-transparent'
+      }  fixed left-0 top-0 right-0 py-5 z-[999999]`}
     >
       <nav className="w-container flex justify-between gap-x-10 items-center">
-        <Link className="grid " to="/">
+        <Link className="grid  " to="/">
           <img
             src={logo}
             alt="logo for prosparity"
-            className="h-full w-full object-contain object-center"
+            className="h-10 md:h-12 lg:h-14 w-full object-contain object-center"
           />
         </Link>
-        <MasterAnchor href="#contact" text="Contact us">
-          <div className="h-7 w-7 group-hover:bg-darkGreen group-hover:stroke-white transition-colors stroke-darkGreen duration-500 ease-in-out bg-white grid place-content-center place-items-center p-px rounded-full">
-            <svg
-              width="10"
-              height="13"
-              viewBox="0 0 12 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2.35449 2.08887L9.88974 6.81298C10.3969 7.13094 10.3969 7.86985 9.88974 8.18782L2.35449 12.9119"
-                stroke="inherit"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
-        </MasterAnchor>
+
+        <div className="flex flex-1 items-center justify-center gap-x-7">
+          <Link
+            className="text-[#E3FFCC] uppercase tracking-wide font-medium"
+            to="#contact"
+          >
+            Company
+          </Link>
+          <Link
+            className="text-[#E3FFCC] uppercase tracking-wide font-medium"
+            to="#contact"
+          >
+            Company
+          </Link>
+          <Link
+            className="text-[#E3FFCC] uppercase tracking-wide font-medium"
+            to="#contact"
+          >
+            Company
+          </Link>
+          <Link
+            className="text-[#E3FFCC] uppercase tracking-wide font-medium"
+            to="#contact"
+          >
+            Company
+          </Link>
+        </div>
+
+        <div>
+          <button
+            type="button"
+            onClick={handleClick}
+            className="rounded-full py-3 px-7  bg-[#0B373C] border-1 border-solid border-[#0B373C]  hover:bg-[#0B373C] hover:text-[#E3FFCC]  text-[#E3FFCC] transition-all duration-300 ease-in-out
+               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+          >
+            Contact us
+          </button>
+        </div>
       </nav>
     </header>
   )

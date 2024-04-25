@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import carosuel_dummy from 'assets/carosuel_dummy.png'
-import { Navigation, EffectCreative } from 'swiper'
+import { CSSTransition, SwitchTransition } from 'react-transition-group'
+import { Navigation } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -40,20 +41,11 @@ export default function Offerings() {
   const changeTab = (update: number) => {
     setActive(update)
     instanceImage.slideTo(update)
-    instanceText.slideTo(update)
   }
   const [instanceImage, setInstanceImage] = useState<any>(null)
-  const [instanceText, setInstanceText] = useState<any>(null)
 
   const swiperImageRef = useRef<any>(null)
-  const swiperTextRef = useRef<any>(null)
-
-  const getTextSwiperInstance = () => {
-    if (swiperTextRef.current && swiperTextRef.current.swiper) {
-      return swiperTextRef.current.swiper
-    }
-    return null
-  }
+  const wrapper = useRef<any>(null)
 
   const getImageSwiperInstance = () => {
     if (swiperImageRef.current && swiperImageRef.current.swiper) {
@@ -63,15 +55,12 @@ export default function Offerings() {
   }
 
   useEffect(() => {
-    const ins_image = getTextSwiperInstance()
-    setInstanceImage(ins_image)
-
     const ins_text = getImageSwiperInstance()
-    setInstanceText(ins_text)
+    setInstanceImage(ins_text)
   }, [])
 
   return (
-    <section className="offering-wrapper">
+    <section className="offering-wrapper blade-bottom-padding-sm blade-top-padding ">
       <div className="grid place-content-center place-items-center text-center">
         <div className="p-[10px] rounded-full bg-greenChip">
           <span className="text-3xl text-black font-medium px-4">
@@ -92,8 +81,14 @@ export default function Offerings() {
         </div>
       </div>
 
-      <div className="grid place-content-center ">
-        <div className="flex items-center bg-white py-4 px-5 tab-wrapper rounded-full gap-10">
+      <div className="grid place-content-center pt-12  pb-14">
+        <div
+          data-aos="appear-down"
+          data-aos-offset="400"
+          data-aos-duration="400"
+          data-aos-easing="ease-in-out"
+          className="flex items-center bg-white py-4 px-5 tab-wrapper rounded-full gap-10"
+        >
           <Tab
             callback={() => changeTab(0)}
             active={active === 0}
@@ -119,17 +114,24 @@ export default function Offerings() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 w-container">
-        <div>
+      <div
+        data-aos="appear-down"
+        data-aos-offset="400"
+        data-aos-duration="400"
+        data-aos-easing="ease-in-out"
+        data-aos-delay="150"
+        className="grid grid-cols-2   w-container offering-card-wrapper p-6 rounded-[40px]"
+      >
+        <div className="max-w-[632px] rounded-[28px] overflow-hidden ">
           <Swiper
             loop={false}
             modules={[Navigation]}
             onSlideChange={(swiper) => {
-              setActive(swiper.realIndex % elems.length)
+              setActive(swiper.activeIndex)
             }}
             ref={swiperImageRef}
             slidesPerView={1}
-            initialSlide={2}
+            initialSlide={0}
           >
             {elems.map((elem, index) => {
               const key = `${index}`
@@ -145,45 +147,78 @@ export default function Offerings() {
         </div>
         <div className="flex flex-col ">
           <div className="flex-1">
-            <Swiper
-              loop={false}
-              modules={[Navigation, EffectCreative]}
-              onSlideChange={(swiper) => {
-                setActive(swiper.realIndex % elems.length)
-              }}
-              creativeEffect={{
-                limitProgress: 1,
-                prev: {
-                  scale: 0.9,
-                  opacity: 0,
-                },
-                next: {
-                  scale: 0.9,
-                  opacity: 0,
-                },
-              }}
-              effect="creative"
-              ref={swiperTextRef}
-              slidesPerView={1}
-              initialSlide={2}
-              speed={600}
-            >
-              {elems.map((elem, index) => {
-                const key = `${index}`
-                return (
-                  <SwiperSlide key={key} className="bg-white d ">
+            <SwitchTransition>
+              <CSSTransition
+                key={active}
+                nodeRef={wrapper.current}
+                timeout={150}
+                classNames="desc-wrapper"
+                unmountOnExit
+              >
+                <div ref={wrapper.current}>
+                  <div className=" h-full ">
                     <div className="h-full flex flex-col gap-2">
-                      <span className="carousel-title bg-clip-text  text-transparent  text-4xl font-medium">
-                        {elem.title}
+                      <span className="carousel-title txt-title max-w-xl leading-tight pb-4 pt-6  bg-clip-text  text-transparent  text-4xl font-medium">
+                        {elems[active].title}
                       </span>
+                      <div className="opacity-0 txt-wrapper">
+                        <p className="text-lg lg:text-xl font-normal text-black font-regular max-w-md ">
+                          {elems[active].subtitle}
+                        </p>
+                      </div>
                     </div>
-                  </SwiperSlide>
-                )
-              })}
-            </Swiper>
+                  </div>
+                </div>
+              </CSSTransition>
+            </SwitchTransition>
           </div>
+          <div className="flex-0 py-10   flex items- gap-5">
+            <button
+              onClick={() => {
+                instanceImage.slidePrev()
+              }}
+              type="button"
+              className="outline-none  focus-visible:outline-none rounded-full bg-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid border-darkGreen hover:stroke-white stroke-darkGreen transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center  h-12 w-12 md:w-16 md:h-16 aspect-square lg:h-20 lg:w-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="inherit"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                />
+              </svg>
+            </button>
 
-          <div className="flex-0">something</div>
+            <button
+              onClick={() => {
+                instanceImage.slideNext()
+              }}
+              type="button"
+              className="outline-none  focus-visible:outline-none rounded-full bg-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid border-darkGreen hover:stroke-white stroke-darkGreen transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center  h-12 w-12 md:w-16 md:h-16 aspect-square lg:h-20 lg:w-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="inherit"
+                className="w-6 h-6 rotate-180"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>

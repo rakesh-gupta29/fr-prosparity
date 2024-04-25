@@ -3,10 +3,17 @@ import check from 'assets/what-we-do.png'
 import { MasterAnchor } from 'atoms/links'
 
 export default function WhatWeDo() {
+  const handleClick = () => {}
   return (
-    <section className="blade-top-padding-lg blade-top-padding-lg">
+    <section className=" bg-[#FBF9F9]  blade-top-padding-lg blade-top-padding-lg">
       <section className="blade-top-padding-lg blade-bottom-padding-lg">
-        <section className="what-we-do-wrapper rounded-[40px] w-container  overflow-hidden">
+        <section
+          data-aos="appear-down"
+          data-aos-offset="400"
+          data-aos-duration="400"
+          data-aos-easing="ease-in-out"
+          className="what-we-do-wrapper rounded-[40px] w-container  overflow-hidden"
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-24 blade-top-padding p-2  blade-bottom-padding">
             <div className="h-[300px]  md:h-[400px] xl:h-[550px] 2xl:h-[680px]">
               <img
@@ -35,8 +42,14 @@ export default function WhatWeDo() {
                 Drivers financed by us use their vehicles for passenger
                 transportation, e-commerce, and cargo deliveries.
               </span>
-              <div>
-                <MasterAnchor href="#contact" text="Contact Us" />
+              <div className="pt-16">
+                <button
+                  type="button"
+                  onClick={handleClick}
+                  className="rounded-full py-3 px-7 bg-[#0B373C] text-[#E3FFCC] text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+                >
+                  Contact us
+                </button>
               </div>
             </div>
           </div>

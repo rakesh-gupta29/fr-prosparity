@@ -15,6 +15,13 @@ module.exports = {
       '7xl': '5rem', // h1
     },
     extend: {
+      keyframes: (theme) => ({
+        appear: {
+          '0%': { opacity: 0, transform: 'translateY(-8px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+      }),
+
       colors: {
         darkGreen: '#001C06',
         lightGreen: '#3AF779',
@@ -36,6 +43,9 @@ module.exports = {
       gridColumn: {},
       animation: {
         'spin-slow': 'spin 10s linear infinite',
+        appear: 'appear 600ms ease-in-out forwards',
+        'appear-100': 'appear 600ms  ease-in-out 100ms  forwards',
+        'appear-300': 'appear 600ms  ease-in-out 300ms  forwards',
       },
       boxShadow: {
         card: 'rgba(247, 151, 79, 0.4) 0px 10px 50px', // remnove in production

@@ -24,7 +24,8 @@
   background-image: linear-gradient(180deg, #001c06 17.89%, #3af779 345.63%);
 }
 
-.features-wrapper .title {
+.features-wrapper .title,
+.teams-wrapper .title {
   background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
 }
 
@@ -82,6 +83,16 @@
   background-repeat: no-repeat;
 }
 
+.dealership-wrapper {
+  background-image: url('assets/ola.png'),
+    linear-gradient(159deg, #fff -1.46%, rgba(255, 255, 255, 0.51) 108.95%);
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  box-shadow: 10px 40px 68.8px 20px rgba(135, 135, 135, 0.21);
+  backdrop-filter: blur(38px);
+}
+
 .offering-wrapper .title {
   background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
 }
@@ -99,4 +110,116 @@
 
 .offering-wrapper .carousel-title {
   background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
+}
+
+.sus-wrapper {
+  background-image: url('assets/letterArt.svg'), url('assets/mesh.png');
+  background-repeat: no-repeat;
+  background-size: auto min(700px, 80%), cover;
+  background-position: right 5% bottom 20%, center;
+}
+
+.offering-wrapper .desc-wrapper-enter {
+  opacity: 0;
+}
+
+.offering-wrapper .desc-wrapper-enter-active {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+
+.offering-wrapper .desc-wrapper-exit {
+  opacity: 1;
+}
+
+.offering-wrapper .desc-wrapper-exit-active {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.offering-wrapper .txt-title {
+  animation: appear 300ms ease-in-out forwards;
+}
+
+.offering-wrapper .txt-wrapper {
+  animation: appear 300ms ease-in-out forwards;
+  animation-delay: 200ms;
+}
+
+.offering-wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    #f7f5f2,
+    #f7f5f2 60%,
+    #fff 60%,
+    #fff
+  );
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.offering-card-wrapper {
+  background: linear-gradient(
+    159deg,
+    #fff -1.46%,
+    rgba(255, 255, 255, 0.51) 108.95%
+  );
+  box-shadow: 10px 40px 68.8px 20px rgba(135, 135, 135, 0.21);
+}
+
+.member-card {
+  border-radius: 41px;
+  background: #fafafa;
+  box-shadow: 10px 40px 68.8px 20px rgba(135, 135, 135, 0.01);
+  backdrop-filter: blur(38px);
+}
+
+.member-card .name {
+  background-image: linear-gradient(180deg, #0b373c 17.89%, #3af779 233.81%);
+}
+
+.member-name {
+  background-image: linear-gradient(180deg, #000 17.89%, #3af779 233.81%);
+}
+
+.modal-wrapper {
+  background: linear-gradient(
+    159deg,
+    #fff -1.46%,
+    rgba(255, 255, 255, 0.51) 108.95%
+  );
+  box-shadow: 10px 40px 68.8px 20px rgba(135, 135, 135, 0.21);
+}
+
+.m-c {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.m-c:hover {
+  transform: scale(1.5);
+}
+
+.m-c:hover + .m-c,
+.m-c:has(+ .m-c:hover) {
+  transform: scale(1.3);
+}
+
+.m-c:hover + .m-c + .m-c,
+.m-c:has(+ .m-c + .m-c:hover) {
+  transform: scale(1.2);
+}
+
+.m-c:hover + .m-c + .m-c + .m-c,
+.m-c:has(+ .m-c + .m-c + .m-c:hover) {
+  transform: scale(1.1);
 }

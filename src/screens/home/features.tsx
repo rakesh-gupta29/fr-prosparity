@@ -24,36 +24,59 @@ const featuresPointers = [
 
 export default function Features() {
   return (
-    <section className="blade-top-padding-lg blade-bottom-padding-lg features-wrapper  ">
-      <div className="w-container grid place-content-center place-items-center text-center ">
-        <div className="grid place-content-start pb-6">
-          <div className="p-[10px] rounded-full bg-creamChip">
-            <span className="text-3xl text-darkGreen font-medium px-4">
-              What sets us apart
+    <section className="blade-bottom-padding-sm">
+      <section className="blade-top-padding-lg blade-bottom-padding-lg features-wrapper  ">
+        <div className="w-container grid place-content-center place-items-center text-center ">
+          <div className="grid place-content-start pb-6">
+            <div
+              data-aos="appear-down"
+              data-aos-offset="400"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+              data-aos-delay="0"
+              className="p-[10px] rounded-full bg-creamChip"
+            >
+              <span className="text-3xl text-darkGreen font-medium px-4">
+                What sets us apart
+              </span>
+            </div>
+          </div>
+
+          <div
+            data-aos="appear-down"
+            data-aos-offset="400"
+            data-aos-duration="400"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="100"
+            className="grid gap-3 "
+          >
+            <span className="text-5xl title font-medium text-transparent bg-clip-text ">
+              How are we different?
+            </span>
+            <span className="text-base md:text-lg 2xl:text-xl leading-normal text-black font-normal font-regular">
+              We specialize in providing asset purchase finance specifically{' '}
+              <br className="md:block hidden" />
+              tailored for electric two-wheelers and three-wheelers, targeting{' '}
+              <br className="md:block hidden" />
+              Tier 2+ cities across India.
             </span>
           </div>
         </div>
 
-        <div className="grid gap-3 ">
-          <span className="text-5xl title font-medium text-transparent bg-clip-text ">
-            How are we different?
-          </span>
-          <span className="text-base md:text-lg 2xl:text-xl leading-normal text-black font-normal font-regular">
-            We specialize in providing asset purchase finance specifically{' '}
-            <br className="md:block hidden" />
-            tailored for electric two-wheelers and three-wheelers, targeting{' '}
-            <br className="md:block hidden" />
-            Tier 2+ cities across India.
-          </span>
+        <div
+          data-aos="appear-down"
+          data-aos-offset="400"
+          data-aos-duration="400"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="250"
+          className="grid grid-cols-3 w-container-lg  gap-x-16 pt-16 md:pt-20 lg:pt-24 xl:pt-28  2xl:pt-32"
+        >
+          {featuresPointers.map((elem, index: number) => {
+            const key = `${index}`
+            return <Card elem={elem} key={key} />
+          })}
         </div>
-      </div>
-
-      <div className="grid grid-cols-3 w-container-lg  gap-x-16 pt-16 md:pt-20 lg:pt-24 xl:pt-28  2xl:pt-32">
-        {featuresPointers.map((elem, index: number) => {
-          const key = `${index}`
-          return <Card elem={elem} key={key} />
-        })}
-      </div>
+      </section>
     </section>
   )
 }
@@ -66,8 +89,8 @@ function Card({
   const { title, desc, icon } = elem
   return (
     <>
-      <article className="grid gap-4 max-w-xl">
-        <div>
+      <article className="flex flex-col gap-4 max-w-xl">
+        <div className="flex-0 ">
           <div className="h-[90px] w-[90px] mb-10 rounded overflow-hidden">
             <img
               src={icon}
@@ -75,11 +98,11 @@ function Card({
               className="h-full w-full object-contain object-center"
             />
           </div>
-          <span className="text-3xl pointers-title text-transparent bg-clip-text font-medium ">
+          <span className="text-3xl pointers-title text-transparent bg-clip-text font-medium leading-normal block">
             {title}
           </span>
         </div>
-        <span className="text-black font-normal text-base md:text-lg 2xl:text-xl leading-normal w-10/12 font-regular">
+        <span className="text-black font-normal text-base md:text-lg 2xl:text-xl leading-normal w-10/12 flex-1 font-regular">
           {desc}{' '}
         </span>
       </article>

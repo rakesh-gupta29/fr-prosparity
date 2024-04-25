@@ -13,7 +13,7 @@ import { Header, Footer } from 'organisms'
 function ViewWithHeaderAndFooter() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Outlet />
       {/* <Footer /> */}
     </>

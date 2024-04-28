@@ -16,11 +16,13 @@ export default function PageHome() {
       <Hero />
       <Products />
       <WhatWeDo />
-      <Offerings />
       <Features />
       <Problems />
-      <Teams />
-      <ContactUs />
+      <Offerings />
+      {/* <Teams /> */}
+      {/* 
+    
+      <ContactUs /> */}
     </>
   )
 }

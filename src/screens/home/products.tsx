@@ -17,15 +17,17 @@ export default function Products() {
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container ">
-        <article className=" rounded-[28px]  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[590px] overflow-hidden product-card-wrapper two_wheeler-card">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-none max-w-3xl mx-auto gap-x-6  lg:gap-x-8 2xl:gap-x-10 gap-y-5 w-container ">
+        <article className=" rounded-[28px]  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12  h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] 2xl:h-[590px] overflow-hidden product-card-wrapper three_wheeler-card">
           <div className="flex flex-col gap-3">
             <span className="text-3xl font-medium text-black leading-tight">
               Electric 3 Wheeler
             </span>
             <span className="text-base md:text-lg xl:text-xl max-w-[450px] font-regular font-normal leading-snug">
-              Get loans for efficient and eco-friendly options for last-mile
-              transportation needs.
+              Get loans for efficient and eco-friendly{' '}
+              <br className="md:block hidden" /> options for last-mile
+              transportation <br className="md:block hidden" />
+              needs.
             </span>
             <div className="grid place-content-start pt-7 ">
               <button
@@ -40,14 +42,15 @@ export default function Products() {
           </div>
         </article>
 
-        <article className=" rounded-[28px]   p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12   h-[590px] overflow-hidden product-card-wrapper three_wheeler-card  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  ">
+        <article className=" rounded-[28px]   p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12  h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] 2xl:h-[590px] overflow-hidden product-card-wrapper two_wheeler-card  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  ">
           <div className="flex flex-col gap-3">
             <span className="text-3xl font-medium text-black leading-tight">
               Electric 2 Wheeler
             </span>
-            <span className="text-base md:text-lg xl:text-xl max-w-[450px] font-regular font-normal leading-snug">
-              Avail loans for reliable and convenient electric scooters for
-              urban and rural commuting.
+            <span className="text-base md:text-lg xl:text-xl font-regular font-normal leading-snug">
+              Avail loans for reliable and convenient{' '}
+              <br className="md:block hidden" /> electric scooters for urban and{' '}
+              <br className="md:block hidden" /> rural commuting.
             </span>
             <div className="grid place-content-start pt-7 ">
               <button
@@ -64,12 +67,12 @@ export default function Products() {
       </div>
 
       <div className="lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container pt-10  ">
-        <article className="h-[550px]  flex flex-col gap-y-5 product-card-wrapper   hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0   rounded-[28px] dealership-wrapper    p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12 ">
+        <article className="h-[300px] md:h-[330px] lg:h-[360px] xl:h-[420px] 2xl:h-[540px]  flex flex-col gap-y-5 product-card-wrapper   hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0   rounded-[28px] dealership-wrapper    p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12 ">
           <div className="flex flex-col gap-3 flex-1 ">
             <span className="text-3xl font-medium text-black leading-tight">
               Dealer Financing:
             </span>
-            <span className="text-base md:text-lg xl:text-xl max-w-[550px] font-regular font-normal leading-snug">
+            <span className="text-base md:text-lg xl:text-xl max-w-sm 2xl:max-w-[550px] font-regular font-normal leading-snug">
               With competitive rates and selective assessment criteria, we
               empower dealers to grow their businesses while fostering strong,
               mutually beneficial relationships.

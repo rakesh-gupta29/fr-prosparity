@@ -72,22 +72,22 @@
 .two_wheeler-card {
   background-image: url('assets/two_wheeler.png');
   background-size: cover;
-  background-position: right bottom;
+  background-position: left bottom;
   background-repeat: no-repeat;
 }
 
 .three_wheeler-card {
   background-image: url('assets/three_wheeler.png');
   background-size: cover;
-  background-position: right bottom;
+  background-position: left bottom;
   background-repeat: no-repeat;
 }
 
 .dealership-wrapper {
-  background-image: url('assets/ola.png'),
+  background-image: url('assets/dealership.png'),
     linear-gradient(159deg, #fff -1.46%, rgba(255, 255, 255, 0.51) 108.95%);
-  background-size: cover;
-  background-position: right bottom;
+  background-size: auto 100%;
+  background-position: center top;
   background-repeat: no-repeat;
   box-shadow: 10px 40px 68.8px 20px rgba(135, 135, 135, 0.21);
   backdrop-filter: blur(38px);
@@ -115,8 +115,17 @@
 .sus-wrapper {
   background-image: url('assets/letterArt.svg'), url('assets/mesh.png');
   background-repeat: no-repeat;
-  background-size: auto min(700px, 80%), cover;
+  background-size: auto min(700px, 70%), cover;
   background-position: right 5% bottom 20%, center;
+}
+
+@media screen and (max-width: 768px) {
+  .sus-wrapper {
+    background-image: url('assets/mesh.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .offering-wrapper .desc-wrapper-enter {
@@ -168,10 +177,10 @@
 }
 
 .offering-card-wrapper {
-  background: linear-gradient(
+  background-image: linear-gradient(
     159deg,
     #fff -1.46%,
-    rgba(255, 255, 255, 0.51) 108.95%
+    rgba(255, 255, 255, 0.81) 108%
   );
   box-shadow: 10px 40px 68.8px 20px rgba(135, 135, 135, 0.21);
 }

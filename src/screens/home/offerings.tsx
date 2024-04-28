@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import carosuel_dummy from 'assets/carosuel_dummy.png'
+import approach from 'assets/offerings/approach.svg'
+import credit from 'assets/offerings/credit.svg'
+
+import robust from 'assets/offerings/robust.svg'
+import tailored from 'assets/offerings/tailored.svg'
+
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
 import { Navigation } from 'swiper'
 
@@ -12,24 +17,24 @@ import 'swiper/css/autoplay'
 const elems = [
   {
     title: ' Innovative Origination Approach',
-    coverImage: carosuel_dummy,
+    coverImage: approach,
     subtitle:
       "We implement dealer-driven, technology-led origination directly from dealerships and embed financing seamlessly through OEM's online platforms.",
   },
   {
     title: 'Credit Underwriting',
-    coverImage: carosuel_dummy,
+    coverImage: credit,
     subtitle:
       'We forge B2B partnerships with ecosystem players to establish scalable distribution channels and efficiently underwrite asset risk using advanced technology and analytics.',
   },
   {
     title: 'Tailored Financing Products ',
-    coverImage: carosuel_dummy,
+    coverImage: tailored,
     subtitle:
       'We tailor products to align with customer profiles, focusing on utility, quality, and end-use of assets.',
   },
   {
-    coverImage: carosuel_dummy,
+    coverImage: robust,
     title: 'Robust Risk Management Strategies',
     subtitle:
       'We utilize data-driven and field-based risk management strategies to mitigate portfolio risks and minimize reliance on OEMs and dealers for financial assurance.',

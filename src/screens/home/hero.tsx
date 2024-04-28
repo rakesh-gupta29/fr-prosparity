@@ -7,15 +7,15 @@ import car from 'assets/banner/car.svg'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-[#08272B] blade-top-padding-lg">
+    <section className=" flex flex-col min-h-[550px] lg:min-h-screen bg-[#08272B] blade-top-padding-lg">
       <div className="text-center grid place-content-center place-items-center gap-4 blade-top-padding-sm blade-top-margin-sm ">
-        <span className="banner-text-gradient bg-clip-text text-transparent text-6xl animate-appear opacity-0 -translate-y-2 font-medium px-2">
+        <span className="banner-text-gradient bg-clip-text text-transparent    text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl animate-appear opacity-0 -translate-y-2 font-medium px-3">
           Accelerating EV financing{' '}
         </span>
-        <span className="text-2xl font-regular text-white px-2 leading-tight animate-appear-100 opacity-0 -translate-y-2  ">
+        <span className="  text-lg xl:text-xl 2xl:text-2xl font-regular text-white px-3 leading-tight animate-appear-100 opacity-0 -translate-y-2  ">
           Driving India’s largest financing platform in electric mobility space
         </span>
-        <div className="pt-10 flex items-center animate-appear-300 opacity-0 -translate-y-2 ">
+        <div className="pt-5 md:pt-7 xl:pt-8 2xl:pt-10 px-5 flex items-center animate-appear-300 opacity-0 -translate-y-2 ">
           <div>
             <img
               src={twoWheeler}
@@ -58,10 +58,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="grid place-content-center place-items-center">
+      <div className="grid mt-auto place-content-center place-items-center">
         <img
           src={banner}
-          className="h-full w-full object-contain object-center"
+          className="h-full w-full  object-cover md:object-contain object-center"
           alt=""
         />
       </div>

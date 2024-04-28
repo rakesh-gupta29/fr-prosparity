@@ -44,18 +44,3 @@ You can view the development server at `localhost:3000`.
 ## [](https://github.com/rakesh-gupta29/boilerplates/tree/main/react-ts#license)License
 
 MIT
-
-Profile summary:
-
--
-
-Worked as lead developer for 8 out of 12 projects collaborating with design and other teams
-– Frontend: React, NextJS, SvelteKit, AstroJS, GSAP, Framer Motion, Redux, React Query
-– Platforms: AWS (S3, Amplify), DigitalOcean, Netlify, Vercel, GitHub Pages
-– Platforms: AWS (S3, Amplify), DigitalOcean, Netlify, Vercel, GitHub Pages
-– Backend: Laravel, Golang, Firebase, GraphCMS
-– Design: Figma, Prototypes, UI/UX design, Design system
-
-- profile url for both team members
-- og image and favicon
-- mission and vision design

@@ -67,8 +67,8 @@ export default function Offerings() {
   return (
     <section className="offering-wrapper blade-bottom-padding-sm blade-top-padding ">
       <div className="grid place-content-center place-items-center text-center">
-        <div className="p-[10px] rounded-full bg-greenChip">
-          <span className="text-3xl text-black font-medium px-4">
+        <div className=" px-[2px] xl:px-[4px]  py-[4px] xl:py-[6px] rounded-full border-1 border-solid border-blueGreen border-opacity-30 bg-darkGreen bg-opacity-20 ">
+          <span className="xl:text-base text-sm  text-blueGreen font-medium px-4">
             What problem are we solving?
           </span>
         </div>

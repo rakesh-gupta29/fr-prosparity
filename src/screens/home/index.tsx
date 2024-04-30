@@ -19,10 +19,8 @@ export default function PageHome() {
       <Features />
       <Problems />
       <Offerings />
-      {/* <Teams /> */}
-      {/* 
-    
-      <ContactUs /> */}
+      <Teams />
+      <ContactUs />
     </>
   )
 }

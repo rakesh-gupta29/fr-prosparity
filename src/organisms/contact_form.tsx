@@ -50,14 +50,14 @@ export default function Form() {
   }
 
   return (
-    <section className="blade-bottom-padding-sm ">
-      <section className="blade-top-padding blade-bottom-padding-lg">
+    <section className="blade-top-padding-lg blade-bottom-padding-lg">
+      <section className="">
         <div>
-          <div>
+          <div className="rounded-xl md:rounded-2xl lg:rounded-3xl xl:rounded-[32px]  border-[3px] border-solid border-opacity-20 border-white form-wrapper">
             <form
               noValidate
               onSubmit={handleSubmit(onSubmit)}
-              className="max-w-screen-sm mx-auto px-3 md:w-11/12 grid  gap-4 md:gap-7"
+              className="max-w-screen-sm mx-auto grid  gap-4 p-10  md:gap-7"
             >
               <div className="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-4">
                 <div>
@@ -66,7 +66,7 @@ export default function Form() {
                     className="grid gap-1 text-base md:text-lg"
                   >
                     <input
-                      className="pl-6  text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
+                      className="pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
                       id="firstName"
                       placeholder="Enter First Name"
                       {...register('firstName')}
@@ -83,7 +83,7 @@ export default function Form() {
                     className="grid gap-1 text-base md:text-lg"
                   >
                     <input
-                      className="pl-6  text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
+                      className="pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
                       id="lastName"
                       placeholder="Enter Last Name"
                       {...register('lastName')}
@@ -100,8 +100,8 @@ export default function Form() {
                   htmlFor="email"
                   className="grid gap-1 text-base md:text-lg"
                 >
-                  <div className=" pl-6 py-[2px] flex items-center gap-5 focus-within:border-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full border-white border-1 border-solid">
-                    <div>
+                  <div className="outline-none focus-visible:outline-none  focus-within:bg-white focus-within:text-black focus-within:placeholder-black focus-within:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 focus-within:stroke-black stroke-white border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg pl-5  pr-3 flex gap-3">
+                    <div className="grid place-content-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="25"
@@ -111,7 +111,7 @@ export default function Form() {
                       >
                         <path
                           d="M7.03662 9.5L12.0366 13L17.0366 9.5"
-                          stroke="white"
+                          stroke="inherit"
                           stroke-opacity="0.9"
                           stroke-width="1.5"
                           stroke-linecap="round"
@@ -119,7 +119,7 @@ export default function Form() {
                         />
                         <path
                           d="M2.03662 17.5V7.5C2.03662 6.39543 2.93205 5.5 4.03662 5.5H20.0366C21.1412 5.5 22.0366 6.39543 22.0366 7.5V17.5C22.0366 18.6046 21.1412 19.5 20.0366 19.5H4.03662C2.93205 19.5 2.03662 18.6046 2.03662 17.5Z"
-                          stroke="white"
+                          stroke="inherit"
                           stroke-opacity="0.9"
                           stroke-width="1.5"
                         />
@@ -127,11 +127,11 @@ export default function Form() {
                     </div>
 
                     <input
-                      className=" text-white  border-none outline-none focus:outline-none focus-visible:outline-none  placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
+                      className=" text-inherit  focus-visible:placeholder-black focus-visible:placeholder-opacity-30 placeholder-opacity-30 placeholder-white flex-1 w-full border-none outline-none focus:outline-none focus-visible:outline-none  placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-5"
                       id="email"
                       type="email"
                       inputMode="email"
-                      placeholder="Make sure it's the one you check often."
+                      placeholder="Please enter your email address"
                       {...register('email')}
                     />
                   </div>
@@ -146,11 +146,11 @@ export default function Form() {
                   className="grid gap-1 text-base md:text-lg"
                 >
                   <input
-                    className="pl-6  text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
+                    className="pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
                     type="number"
                     id="phone"
                     inputMode="numeric"
-                    placeholder="Enter the phone number"
+                    placeholder="Please enter your phone number"
                     {...register('phone')}
                   />
                   {errors.phone && (
@@ -168,11 +168,21 @@ export default function Form() {
                     rows={7}
                     cols={5}
                     id="message"
-                    className="pl-6  text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4 resize-y"
+                    className="pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
                     placeholder="Hey. say something"
                     {...register('message')}
                   />
                 </label>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  className="rounded-full py-3 px-7  bg-[#3AF779] border-1 border-solid border-[#0B373C] text-[#0B373C] hover:outline-[#3AF779] outline outline-2 outline-solid outline-offset-2 outline-transparent hover:text-blueGreen focus-visible:outline-[#3AF779] transition-all duration-300 ease-in-out
+               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+                >
+                  Contact us
+                </button>
               </div>
             </form>
           </div>

@@ -56,15 +56,17 @@
 }
 
 .contact-us-wrapper {
-  background-image: radial-gradient(
-      70% 40% at center top,
-      #009b9e71,
-      #009b9e36,
-      #009b9e11
-    ),
+  background-image: url('assets/contact_us.png'),
+    radial-gradient(70% 40% at center top, #009b9e71, #009b9e36, #009b9e11),
     linear-gradient(to bottom, #051c1f, #051c1f);
+  background-size: 100% auto, cover, cover;
+  background-repeat: no-repeat;
+  background-position: top center, cover, cover;
 }
 
+.contact-us-wrapper .title {
+  background-image: linear-gradient(180deg, #fff 17.89%, #3af779 170.15%);
+}
 /* .three_wheeler-card {
   background-image: url('assets/threeWheeler.png');
 } */
@@ -231,4 +233,28 @@
 .m-c:hover + .m-c + .m-c + .m-c,
 .m-c:has(+ .m-c + .m-c + .m-c:hover) {
   transform: scale(1.1);
+}
+
+/* contact form */
+.form-wrapper {
+  background: linear-gradient(
+      0deg,
+      rgba(11, 55, 60, 0.5) 0%,
+      rgba(11, 55, 60, 0.5) 100%
+    ),
+    linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.2) -1.97%,
+      rgba(255, 255, 255, 0.17) 112.59%
+    );
+}
+
+/*  footer */
+footer {
+  background: url('assets/footer-bg.svg'),
+    radial-gradient(55% 85% at center bottom, #3bfe7c4b, #3bfe7c13, transparent),
+    linear-gradient(to bottom, #08272b, #08272b);
+  background-size: 300px auto, contain, cover;
+  background-position: 80% center, center, center;
+  background-repeat: no-repeat;
 }

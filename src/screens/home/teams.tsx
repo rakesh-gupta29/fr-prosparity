@@ -10,14 +10,15 @@ const members = [
     designation: 'Co-Founder and CEO',
     coverImage: saurabh,
     desc: 'Saurabh is an MBA graduate from IIFM and boasts over 12 years of experience and currently holds positions as Co-Founder and CEO at both Northern Arc and Stashfin. His expertise lies in capital raising, strategic planning, and a deep understanding of vehicle and consumer lending domains.',
-    profileURL: '',
+    profileURL:
+      'https://www.linkedin.com/in/saurabh-khodke-80694240/?originalSubdomain=in',
   },
   {
     name: 'Anirudh Dhakar',
     designation: 'Co-Founder and COO',
     coverImage: anni,
     desc: 'Anirudh is an MBA alumnus from IIFM and brings over 12 years of experience to his roles as Co-Founder and COO at Northern Arc, SBI, and Stashfin. His core strengths include adeptly managing platforms and overseeing business tech operations.',
-    profileURL: '',
+    profileURL: 'https://www.linkedin.com/in/anirudh-dhakar-78979a4b/',
   },
 ]
 
@@ -161,7 +162,8 @@ function Teams() {
 
                       <div className="pt-8">
                         <a
-                          href=""
+                          target="_blank"
+                          href={members[modal].profileURL}
                           className="bg-[#0B373C]  grid place-content-center rounded-md h-[54px] w-[54px]"
                         >
                           <svg

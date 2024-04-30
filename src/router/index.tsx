@@ -9,10 +9,13 @@ import {
   PagePrivacyPolicy,
 } from 'screens/index'
 import { Header, Footer } from 'organisms'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function ViewWithHeaderAndFooter() {
   return (
     <>
+      <ToastContainer />
       <Header />
       <Outlet />
       <Footer />

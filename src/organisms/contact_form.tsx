@@ -3,6 +3,8 @@ import { z } from 'zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { MasterBtn } from 'atoms/buttons'
+import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify'
 
 const formSchema = z.object({
   firstName: z
@@ -38,17 +40,26 @@ export default function Form() {
 
   const onSubmit: SubmitHandler<FormFieldSchema> = async (data) => {
     setLoading(true)
-    const res = await fetch('')
-    if (res.ok) {
-      console.log(data)
-      console.log('form has been submitted')
-    } else {
-      console.error('Form error')
-    }
-    reset()
-    setLoading(false)
-  }
+    try {
+      // this is connected with client's email. uncomment the code only in production.
+      emailjs
+        .send('service_kj9qbjs', 'template_hpflit9', data, 'Mz3pU17gIjeuCF3oR')
+        .then(
+          () => {
+            reset()
+            toast('Form submitted succesfully!')
+          },
+          () => {
+            toast('Could not submit the form')
+          },
+        )
+        .finally(() => setLoading(false))
+    } catch {
+      setLoading(false)
 
+      toast.error('Failed to submit the form.')
+    }
+  }
   return (
     <section className="blade-top-padding-lg blade-bottom-padding-lg">
       <section className="">
@@ -112,16 +123,16 @@ export default function Form() {
                         <path
                           d="M7.03662 9.5L12.0366 13L17.0366 9.5"
                           stroke="inherit"
-                          stroke-opacity="0.9"
-                          stroke-width="1.5"
+                          strokeOpacity="0.9"
+                          strokeWidth="1.5"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                         />
                         <path
                           d="M2.03662 17.5V7.5C2.03662 6.39543 2.93205 5.5 4.03662 5.5H20.0366C21.1412 5.5 22.0366 6.39543 22.0366 7.5V17.5C22.0366 18.6046 21.1412 19.5 20.0366 19.5H4.03662C2.93205 19.5 2.03662 18.6046 2.03662 17.5Z"
                           stroke="inherit"
-                          stroke-opacity="0.9"
-                          stroke-width="1.5"
+                          strokeOpacity="0.9"
+                          strokeWidth="1.5"
                         />
                       </svg>
                     </div>

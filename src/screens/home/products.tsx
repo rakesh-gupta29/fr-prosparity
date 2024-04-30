@@ -6,7 +6,7 @@ export default function Products() {
   return (
     <section className=" bg-[#FBF9F9] blade-top-padding-lg blade-bottom-padding-sm ">
       <div
-        className="pb-[72px] text-wrapper"
+        className="pb-8 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16 2xl:pb-[72px] text-wrapper"
         data-aos="appear-down"
         data-aos-offset="400"
         data-aos-duration="400"
@@ -29,7 +29,7 @@ export default function Products() {
               transportation <br className="md:block hidden" />
               needs.
             </span>
-            <div className="grid place-content-start pt-7 ">
+            <div className="grid place-content-start  pt-5 md:pt-6 lg:pt-7 ">
               <button
                 type="button"
                 onClick={handleClick}
@@ -52,7 +52,7 @@ export default function Products() {
               <br className="md:block hidden" /> electric scooters for urban and{' '}
               <br className="md:block hidden" /> rural commuting.
             </span>
-            <div className="grid place-content-start pt-7 ">
+            <div className="grid place-content-start  pt-5 md:pt-6 lg:pt-7 ">
               <button
                 type="button"
                 onClick={handleClick}
@@ -77,7 +77,7 @@ export default function Products() {
               empower dealers to grow their businesses while fostering strong,
               mutually beneficial relationships.
             </span>
-            <div className="grid place-content-start pt-7 ">
+            <div className="grid place-content-start  pt-5 md:pt-6 lg:pt-7 ">
               <button
                 type="button"
                 onClick={handleClick}

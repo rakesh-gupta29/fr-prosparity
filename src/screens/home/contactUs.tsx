@@ -46,16 +46,16 @@ function EmailIcon() {
       <path
         d="M3.88997 0.908203H24.5566C25.9775 0.908203 27.14 2.0707 27.14 3.49154V18.9915C27.14 20.4124 25.9775 21.5749 24.5566 21.5749H3.88997C2.46914 21.5749 1.30664 20.4124 1.30664 18.9915V3.49154C1.30664 2.0707 2.46914 0.908203 3.88997 0.908203Z"
         stroke="#3AF779"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
       <path
         d="M27.14 3.49414L14.2233 12.5358L1.30664 3.49414"
         stroke="#3AF779"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   )

@@ -60,7 +60,7 @@ export default function Header() {
           <img
             src={logo}
             alt="logo for prosparity"
-            className="h-10 md:h-12 lg:h-14 w-full object-contain object-center"
+            className="h-8 md:h-10 lg:h-12 xl:h-14 w-full object-contain object-center"
           />
         </Link>
 
@@ -70,7 +70,7 @@ export default function Header() {
           <TextAnchor href="#team" title="Team" />
         </div>
 
-        <div className="basis-80 grow-0 shrink  flex justify-end">
+        <div className="lg:basis-80 lg:block hidden grow-0 shrink  flex justify-end">
           <button
             type="button"
             onClick={handleClick}

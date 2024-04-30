@@ -326,13 +326,13 @@ function Card({
             <path
               d="M12.9971 1.9082L12.9971 22.7482"
               stroke="inherit"
-              stroke-width="2.95673"
+              strokeWidth="2.95673"
               stroke-linecap="round"
             />
             <path
               d="M2.03613 11.7864L22.8762 11.7864"
               stroke="inherit"
-              stroke-width="2.95673"
+              strokeWidth="2.95673"
               stroke-linecap="round"
             />
           </svg>

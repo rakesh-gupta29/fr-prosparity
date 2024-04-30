@@ -20,10 +20,10 @@ export default function Products() {
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-none max-w-3xl mx-auto gap-x-6  lg:gap-x-8 2xl:gap-x-10 gap-y-5 w-container ">
         <article className=" rounded-[28px]  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12  h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] 2xl:h-[590px] overflow-hidden product-card-wrapper three_wheeler-card">
           <div className="flex flex-col gap-3">
-            <span className="text-3xl font-medium text-black leading-tight">
+            <span className="text-2xl lg:text-3xl font-medium text-black leading-tight">
               Electric 3 Wheeler
             </span>
-            <span className="text-base md:text-lg xl:text-xl max-w-[450px] font-regular font-normal leading-snug">
+            <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl max-w-[450px] font-regular font-normal leading-snug">
               Get loans for efficient and eco-friendly{' '}
               <br className="md:block hidden" /> options for last-mile
               transportation <br className="md:block hidden" />
@@ -34,7 +34,7 @@ export default function Products() {
                 type="button"
                 onClick={handleClick}
                 className="rounded-full py-3 px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
-               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+                text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-semibold  tracking-wide "
               >
                 Contact us
               </button>
@@ -44,10 +44,10 @@ export default function Products() {
 
         <article className=" rounded-[28px]   p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12  h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] 2xl:h-[590px] overflow-hidden product-card-wrapper two_wheeler-card  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  ">
           <div className="flex flex-col gap-3">
-            <span className="text-3xl font-medium text-black leading-tight">
+            <span className="text-2xl lg:text-3xl font-medium text-black leading-tight">
               Electric 2 Wheeler
             </span>
-            <span className="text-base md:text-lg xl:text-xl font-regular font-normal leading-snug">
+            <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-normal leading-snug">
               Avail loans for reliable and convenient{' '}
               <br className="md:block hidden" /> electric scooters for urban and{' '}
               <br className="md:block hidden" /> rural commuting.
@@ -56,8 +56,8 @@ export default function Products() {
               <button
                 type="button"
                 onClick={handleClick}
-                className="rounded-full py-3 px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
-               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+                className="rounded-full py-1 md:py-2 lg:py-3  px-4 md:px-6 lg:px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
+                text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-semibold  tracking-wide "
               >
                 Contact us
               </button>
@@ -69,10 +69,10 @@ export default function Products() {
       <div className="lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container pt-10  ">
         <article className="h-[300px] md:h-[330px] lg:h-[360px] xl:h-[420px] 2xl:h-[540px]  flex flex-col gap-y-5 product-card-wrapper   hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0   rounded-[28px] dealership-wrapper    p-3 md:p-5 lg:p-7 xl:p-9 2xl:p-12 ">
           <div className="flex flex-col gap-3 flex-1 ">
-            <span className="text-3xl font-medium text-black leading-tight">
+            <span className="text-2xl lg:text-3xl font-medium text-black leading-tight">
               Dealer Financing:
             </span>
-            <span className="text-base md:text-lg xl:text-xl max-w-sm 2xl:max-w-[550px] font-regular font-normal leading-snug">
+            <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl max-w-sm 2xl:max-w-[550px] font-regular font-normal leading-snug">
               With competitive rates and selective assessment criteria, we
               empower dealers to grow their businesses while fostering strong,
               mutually beneficial relationships.
@@ -81,8 +81,8 @@ export default function Products() {
               <button
                 type="button"
                 onClick={handleClick}
-                className="rounded-full py-3 px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
-               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+                className="rounded-full py-1 md:py-2 lg:py-3  px-4 md:px-6 lg:px-7   bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
+                text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-semibold  tracking-wide "
               >
                 Contact us
               </button>

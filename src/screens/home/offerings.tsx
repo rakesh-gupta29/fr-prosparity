@@ -74,7 +74,7 @@ export default function Offerings() {
         </div>
 
         <div className="pt-10 grid gap-[10px]">
-          <h2 className="text-4xl font-medium title bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium title bg-clip-text text-transparent">
             Offering next-gen financial solutions
           </h2>
           <span className="font-regular font-normal text-center leading-normal text-base md:text-xl lg:text-xl 2xl:text-xl">

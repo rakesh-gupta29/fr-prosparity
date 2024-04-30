@@ -56,7 +56,7 @@ export default function Header() {
       }  fixed left-0 top-0 right-0 py-5 z-[999999]`}
     >
       <nav className="w-container flex justify-between gap-x-10 items-center">
-        <Link className="grid  " to="/">
+        <Link className="grid   lg:basis-80 grow-0 shrink  " to="/">
           <img
             src={logo}
             alt="logo for prosparity"
@@ -64,34 +64,13 @@ export default function Header() {
           />
         </Link>
 
-        <div className="flex flex-1 items-center justify-center gap-x-7">
-          <Link
-            className="text-[#E3FFCC] uppercase tracking-wide font-medium"
-            to="#contact"
-          >
-            Company
-          </Link>
-          <Link
-            className="text-[#E3FFCC] uppercase tracking-wide font-medium"
-            to="#contact"
-          >
-            Company
-          </Link>
-          <Link
-            className="text-[#E3FFCC] uppercase tracking-wide font-medium"
-            to="#contact"
-          >
-            Company
-          </Link>
-          <Link
-            className="text-[#E3FFCC] uppercase tracking-wide font-medium"
-            to="#contact"
-          >
-            Company
-          </Link>
+        <div className=" flex-1 items-center justify-center gap-x-7  md:flex hidden">
+          <TextAnchor href="#product" title="Products" />
+          <TextAnchor href="#offerings" title="Offerings" />
+          <TextAnchor href="#team" title="Team" />
         </div>
 
-        <div>
+        <div className="basis-80 grow-0 shrink  flex justify-end">
           <button
             type="button"
             onClick={handleClick}
@@ -103,5 +82,16 @@ export default function Header() {
         </div>
       </nav>
     </header>
+  )
+}
+
+function TextAnchor({ title, href }: { title: string; href: string }) {
+  return (
+    <Link
+      to={href}
+      className="text-[#E3FFCC] text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font"
+    >
+      {title}
+    </Link>
   )
 }

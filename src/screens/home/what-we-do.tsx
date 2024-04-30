@@ -49,7 +49,7 @@ export default function WhatWeDo() {
                 <button
                   type="button"
                   onClick={handleClick}
-                  className="rounded-full py-3 px-7 bg-[#0B373C] text-[#E3FFCC] text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+                  className="rounded-full py-1 md:py-2 lg:py-3  px-4 md:px-6 lg:px-7 bg-[#0B373C] text-[#E3FFCC] text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
                 >
                   Contact us
                 </button>

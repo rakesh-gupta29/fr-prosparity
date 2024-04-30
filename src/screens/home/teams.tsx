@@ -29,7 +29,7 @@ export default function TeamAndVision() {
     <>
       <div>
         <div className="grid px-3 text-center teams-wrapper  place-content-center blade-bottom-padding blade-top-padding-lg">
-          <span className="text-5xl title  font-medium text-transparent bg-clip-text ">
+          <span className="text-3xl md:text-4xl 2xl:text-5xl title  font-medium text-transparent bg-clip-text ">
             Who we are
           </span>
         </div>
@@ -57,7 +57,9 @@ export default function TeamAndVision() {
 function Mission() {
   return (
     <div className="min-h-[300px] grid place-content-center text-center">
-      <span className="text-3xl font-medium">Mission and Vision</span>
+      <span className="text-2xl px-4  lg:text-3xl font-medium">
+        Mission and Vision
+      </span>
     </div>
   )
 }
@@ -76,7 +78,7 @@ function Tab({
       onClick={callback}
       className={` ${
         active ? 'tab-active' : ''
-      } px-8 text-lg 2xl:text-xl py-2 rounded-full font-medium`}
+      } px-6 md:px-8  text-base md:text-lg 2xl:text-xl  py-1.5 md:py-2 rounded-full font-medium`}
     >
       {text}
     </button>
@@ -112,8 +114,31 @@ function Teams() {
 
             <div className="fixed inset-0 w-screen overflow-y-auto">
               <div className="flex min-h-full items-center justify-center p-4">
-                <Dialog.Panel className=" max-w-[1380px] mx-auto modal-wrapper rounded-[40px] w-full">
-                  <div className="grid md:grid-cols-2 grid-cols-1 gap-x-10 h-[618px] p-6 w-full ">
+                <Dialog.Panel className=" max-w-[1380px] mx-auto modal-wrapper  md:rounded-[24px] lg:rounded-[30px] xl:rounded-[40px] w-full">
+                  <div className="flex justify-end  pr-4 py-4 ">
+                    <button
+                      onClick={() => setModal(-1)}
+                      type="button"
+                      className="bg-black mt-1 stroke-white transition-all duration-300 ease-in-out grid place-content-center hover:bg-greenChip hover:stroke-black
+                             aspect-square h-10 w-10 xl:h-12 xl:w-12 rounded-full "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="inherit"
+                        className="lg:w-6 h-5 md:h-5 w-5 md:w-5 lg:h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18 18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="grid md:grid-cols-2 grid-cols-1 gap-x-10 min-h-[618px] max-h-[500px] overflow-auto  md:max-h-none p-6 w-full ">
                     <div className="rounded-3xl overflow-hidden">
                       <img
                         src={members[modal].coverImage}
@@ -123,9 +148,9 @@ function Teams() {
                     </div>
                     <div className="flex flex-col">
                       <div className="flex-1">
-                        <div className="flex justify-between gap-x-6">
-                          <div className="flex-1 pt-6 flex flex-col">
-                            <span className="member-name bg-clip-text text-transparent text-4xl font-medium ">
+                        <div className="flex justify-between items-center  gap-x-6">
+                          <div className="flex-1  pt-3 md:pt-4 lg:pt-6 flex flex-col justify-center">
+                            <span className="member-name bg-clip-text text-transparent text-2xl md:text-3xl xl:text-4xl font-medium ">
                               {members[modal].name}
                             </span>
                             <span className="text-sm md:text-base xl:text-lg 2xl:text-xl font-normal text-black font-medium">
@@ -135,7 +160,8 @@ function Teams() {
                           <button
                             onClick={() => setModal(-1)}
                             type="button"
-                            className="bg-black stroke-white transition-all duration-300 ease-in-out grid place-content-center hover:bg-greenChip hover:stroke-black aspect-square h-10 w-10 xl:h-12 xl:w-12 rounded-full "
+                            className="bg-black mt-1 lg:block hidden stroke-white transition-all duration-300 ease-in-out grid place-content-center hover:bg-greenChip hover:stroke-black
+                             aspect-square h-10 w-10 xl:h-12 xl:w-12 rounded-full "
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +169,7 @@ function Teams() {
                               viewBox="0 0 24 24"
                               strokeWidth={2}
                               stroke="inherit"
-                              className="w-6 h-6"
+                              className="lg:w-6 h-5 md:h-5 w-5 md:w-5 lg:h-6"
                             >
                               <path
                                 strokeLinecap="round"
@@ -153,8 +179,8 @@ function Teams() {
                             </svg>
                           </button>
                         </div>
-                        <div className="max-w-md  pt-6">
-                          <span className="text-lg xl:text-xl font-regular leading-snug">
+                        <div className="max-w-md pt-4  md:pt-6">
+                          <span className="text-sm md:text-base lg:text-lg xl:text-xl font-regular leading-normal block">
                             {members[modal].desc}
                           </span>
                         </div>
@@ -164,12 +190,13 @@ function Teams() {
                         <a
                           target="_blank"
                           href={members[modal].profileURL}
-                          className="bg-[#0B373C]  grid place-content-center rounded-md h-[54px] w-[54px]"
+                          className="bg-[#0B373C]  grid place-content-center rounded-md  lg:h-12 md:h-10 h-8 w-8 md:w-10 lg:w-12 xl:h-[54px] xl:w-[54px]"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="31"
-                            height="31"
+                            width="32"
+                            height="32"
+                            className="h-5 md:h-6 lg:h-8 w-5 md:w-6 lg:w-8"
                             viewBox="0 0 31 31"
                             fill="none"
                           >
@@ -239,7 +266,7 @@ function Teams() {
         </Transition>
       )}
 
-      <div className="grid grid-cols-2 max-w-7xl gap-x-16 blade-top-padding-lg  blade-bottom-padding-lg  mx-auto px-3 ">
+      <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding-lg  blade-bottom-padding-lg  mx-auto px-3 ">
         {members.map((elem, index: number) => {
           return (
             <Card
@@ -267,16 +294,16 @@ function Card({
   const { name, designation, coverImage } = elem
   return (
     <article className="member-card  max-w-[538px]  hover:border-opacity-100 transition-all duration-300 ease-in-out   mx-auto ">
-      <div className=" h-[540px] w-full hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0   rounded-[40px] overflow-hidden">
+      <div className="h-[360px] md:h-[400px] xl:h-[450px] 2xl:h-[540px] w-full hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  rounded-xl  md:rounded-[24px] lg:rounded-[30px] xl:rounded-[40px] overflow-hidden">
         <img
           src={coverImage}
           className="w-full h-full object-top object-contain "
           alt={`${name} - team member of Prosparity`}
         />
       </div>
-      <div className="flex items-center gap-x-3 pr-2 pt-7 ">
+      <div className="flex items-center gap-x-3 pr-2 pt-4 md:pt-6  lg:pt-7 ">
         <div className="grid  gap-px flex-1 ">
-          <span className="name bg-clip-text text-transparent text-3xl font-medium ">
+          <span className="name bg-clip-text text-transparent text-xl md:text-2xl xl:text-3xl font-medium ">
             {name}
           </span>
           <span className="text-sm md:text-base xl:text-lg 2xl:text-xl font-normal text-black font-medium">
@@ -286,13 +313,14 @@ function Card({
         <button
           onClick={() => callback(index)}
           type="button"
-          className="bg-black stroke-white transition-all duration-300 ease-in-out grid place-content-center hover:bg-greenChip hover:stroke-black aspect-square h-12 w-12 xl:h-14 xl:w-14 rounded-full "
+          className="bg-black stroke-white transition-all duration-300 ease-in-out grid place-content-center hover:bg-greenChip hover:stroke-black aspect-square md:h-10 md:w-10 h-8 w-8  lg:h-12 lg:w-12 xl:h-14 xl:w-14 rounded-full "
         >
           <svg
             width="25"
             height="25"
             viewBox="0 0 25 25"
             fill="none"
+            className="h-3 w-3 md:h-4 md:w-4 lg:h-6 lg:w-6"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

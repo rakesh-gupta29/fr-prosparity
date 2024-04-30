@@ -18,18 +18,18 @@ export default function Problems() {
             mobility by doing our bit
           </h3>
           <ul className="flex flex-col gap-3 lg:gap-5 xl:gap-6  pt-5 md:pt-7 xl:pt-9">
-            <li className="text-white font-normal leading-normal font-regular text-base md:text-lg 2xl:text-xl max-w-lg  w-11/12">
+            <li className="text-white font-normal leading-normal font-regular text-sm md:text-base lg:text-lg 2xl:text-xl max-w-lg  w-11/12">
               At ProsParity, sustainability is our guiding principle. We
               champion inclusive economic growth through initiatives such as
               supporting EVs for livelihood generation, recognizing the immense
               potential for impact in India's growing EV market.
             </li>
 
-            <li className="text-white font-normal leading-normal font-regular text-base md:text-lg 2xl:text-xl max-w-lg  w-11/12">
+            <li className="text-white font-normal leading-normal font-regular text-sm md:text-base lg:text-lg 2xl:text-xl max-w-lg  w-11/12">
               By bridging transportation gaps, reducing pollution, and improving
               the lives of drivers, we're driving meaningful change.
             </li>
-            <li className="text-white font-normal leading-normal font-regular text-base md:text-lg 2xl:text-xl max-w-lg  w-11/12">
+            <li className="text-white font-normal leading-normal font-regular text-sm md:text-base lg:text-lg 2xl:text-xl max-w-lg  w-11/12">
               Join us on our sustainable journey, where every mile counts
               towards building a greener, more equitable future.
             </li>

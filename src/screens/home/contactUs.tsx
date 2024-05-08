@@ -7,13 +7,13 @@ export default function ContactUs() {
       id="contact"
       className="contact-us-wrapper  md:blade-top-padding-sm blade-bottom-padding-lg "
     >
-      <div className="w-container-lg  w-full  grid grid-cols-1 lg:grid-cols-2 md:blade-top-padding-lg">
+      <div className="w-container-lg  w-full gap-y-10 grid grid-cols-1 lg:grid-cols-2 md:blade-top-padding-lg">
         <div className="flex flex-col md:pl-4  lg:pl-8 xl:pl-10 2xl:pl-12 justify-start blade-top-padding-lg ">
           <span className="title bg-clip-text text-transparent leading-tight font-medium text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
             Join us in the <br className="md:block hidden" /> EV Revolution!
           </span>
 
-          <div className="pt-6 md:pt-8 lg:pt-12 xl:pt-14 grid x gap-4 l:gap-6 ">
+          <div className="pt-6 md:pt-8 lg:pt-12 xl:pt-14 grid gap-2 md:gap-3 lg:gap-4 l:gap-6 ">
             <span className=" text-white  font-medium text-lg md:text-xl  xl:text-2xl 2xl:text-3xl">
               Contact Info
             </span>

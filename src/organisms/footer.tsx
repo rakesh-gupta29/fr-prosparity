@@ -57,8 +57,8 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex gap-4 md:gap-6 xl:gap-8 2xl:gap-10 pt-3 md:pt-4 xl:pt-6">
-            <TextAnchor href="/privacy" title="Privacy" />
-            <TextAnchor href="/terms-and-conditions" title="Terms" />
+            <TextAnchor href="/privacy" title="Privacy" disabled />
+            <TextAnchor href="/terms-and-conditions" title="Terms" disabled />
             <span className="font-medium text-white md:block hidden text-opacity-30">
               Copyright © 2024 Prospartiy
             </span>
@@ -75,11 +75,21 @@ export default function Footer() {
   )
 }
 
-function TextAnchor({ title, href }: { title: string; href: string }) {
+function TextAnchor({
+  title,
+  href,
+  disabled = false,
+}: {
+  disabled?: boolean
+  title: string
+  href: string
+}) {
   return (
     <a
       href={href}
-      className="text-[#E3FFCC] text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font"
+      className={` text-[#E3FFCC] text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font ${
+        disabled ? 'opacity-70  pointer-events-none touch-none' : ''
+      }`}
     >
       {title}
     </a>

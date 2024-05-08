@@ -3,8 +3,11 @@ import banner from 'assets/banner.png'
 
 export default function HeroUpdated() {
   return (
-    <section className="blade-top-padding-lg blade-bottom-padding-lg bg-blueGreen">
-      <div className="flex lg:flex-row  mt-16 md:mt-10 lg:mt-0 flex-col">
+    <section
+      id="hero"
+      className="blade-top-padding-lg blade-bottom-padding-lg bg-blueGreen"
+    >
+      <div className="flex lg:flex-row  mt-6 md:mt-8 lg:mt-0 flex-col">
         <div className="blade-top-padding blade-top-margin-sm pl-3 sm:pl-10 md:pl-20  lg:pl-32 xl:pl-44 2xl:pl-48 basis-0 grow shrink flex-1">
           <div className="font-medium text-2xl  w-10/12  text-white lg:text-3xl 2xl:text-4xl leading-tight">
             <span className="text-[#3BFE7B] ">Reimagining Distribution</span> Of

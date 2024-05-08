@@ -15,6 +15,20 @@ function App() {
     AOS.init()
   }, [])
 
+  // useEffect(() => {
+  //   function openHtmlInNewTab() {
+  //     fetch('http://127.0.0.1:8000/api/v1/testing')
+  //       .then((response) => response.text())
+  //       .then((htmlContent) => {
+  //         var newWindow = window.open() as any
+  //         newWindow.document.write(htmlContent)
+  //       })
+  //       .catch((error) => {
+  //         console.error('Error:', error)
+  //       })
+  //   }
+  //   openHtmlInNewTab()
+  // }, [])
   return (
     <BrowserRouter>
       <RenderRoutes />

@@ -14,11 +14,11 @@ export default function Footer() {
               className="h-10 md:h-12 lg:h-14 w-full object-contain object-center"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-3 md:gap-y-6 max-w-lg">
-            <TextAnchor href="#contact" title="Contact us" />
-            <TextAnchor href="#product" title="Products" />
-            <TextAnchor href="#offerings" title="Offerings" />
-            <TextAnchor href="#team" title="Team" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-3 md:gap-y-6 max-w-xl">
+            <TextAnchor href="#products" title="Our products" />
+            <TextAnchor href="#why-us" title="Why us" />
+            <TextAnchor href="#teams" title="About us" />
+            <TextAnchor href="#investors" title="Our Investors" />
           </div>
           <div>
             <a
@@ -77,11 +77,11 @@ export default function Footer() {
 
 function TextAnchor({ title, href }: { title: string; href: string }) {
   return (
-    <Link
-      to={href}
-      className="text-[#E3FFCC]  text-[12px] md:text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font"
+    <a
+      href={href}
+      className="text-[#E3FFCC] text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font"
     >
       {title}
-    </Link>
+    </a>
   )
 }

@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 
-import saurabh from 'assets/saurabh.png'
-import anni from 'assets/member_2.png'
+import saurabh from 'assets/team1.png'
+import anni from 'assets/team2.png'
 import { Dialog, Transition } from '@headlessui/react'
 
 const members = [
@@ -27,7 +27,7 @@ export default function TeamAndVision() {
   const changeTab = (update: number) => setActive(update)
   return (
     <>
-      <div>
+      <div id="teams">
         <div className="grid px-3 text-center teams-wrapper  place-content-center blade-top-padding-lg">
           <span className="text-3xl md:text-4xl 2xl:text-5xl title  font-medium text-transparent bg-clip-text ">
             Who we are
@@ -242,7 +242,7 @@ function Teams() {
         </Transition>
       )}
 
-      <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding  blade-bottom-padding-lg  mx-auto px-3 ">
+      <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding  mx-auto px-3 ">
         {members.map((elem, index: number) => {
           return (
             <Card
@@ -307,13 +307,13 @@ function Card({
               d="M12.9971 1.9082L12.9971 22.7482"
               stroke="inherit"
               strokeWidth="2.95673"
-              stroke-linecap="round"
+              strokeLinecap="round"
             />
             <path
               d="M2.03613 11.7864L22.8762 11.7864"
               stroke="inherit"
               strokeWidth="2.95673"
-              stroke-linecap="round"
+              strokeLinecap="round"
             />
           </svg>
         </button>

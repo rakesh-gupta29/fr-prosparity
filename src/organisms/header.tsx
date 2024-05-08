@@ -65,20 +65,21 @@ export default function Header() {
         </Link>
 
         <div className=" flex-1 items-center justify-center gap-x-7  md:flex hidden">
-          <TextAnchor href="#product" title="Products" />
-          <TextAnchor href="#offerings" title="Offerings" />
-          <TextAnchor href="#team" title="Team" />
+          <TextAnchor href="#products" title="Our products" />
+          <TextAnchor href="#why-us" title="Why us" />
+          <TextAnchor href="#teams" title="About us" />
+          <TextAnchor href="#investors" title="Our Investors" />
         </div>
 
-        <div className="lg:basis-80 lg:block hidden grow-0 shrink  flex justify-end">
-          <button
-            type="button"
+        <div className="lg:basis-80 lg:flex hidden grow-0 shrink   justify-end">
+          <a
+            href="#contact"
             onClick={handleClick}
             className="rounded-full py-3 px-7  bg-[#0B373C] border-1 border-solid border-[#0B373C]  hover:bg-[#0B373C] hover:text-[#E3FFCC]  text-[#E3FFCC] transition-all duration-300 ease-in-out
                text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
           >
             Contact us
-          </button>
+          </a>
         </div>
       </nav>
     </header>
@@ -87,11 +88,11 @@ export default function Header() {
 
 function TextAnchor({ title, href }: { title: string; href: string }) {
   return (
-    <Link
-      to={href}
+    <a
+      href={href}
       className="text-[#E3FFCC] text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font"
     >
       {title}
-    </Link>
+    </a>
   )
 }

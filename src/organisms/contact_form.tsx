@@ -124,7 +124,7 @@ export default function Form() {
                           stroke="inherit"
                           strokeOpacity="0.9"
                           strokeWidth="1.5"
-                          stroke-linecap="round"
+                          strokeLinecap="round"
                           strokeLinejoin="round"
                         />
                         <path

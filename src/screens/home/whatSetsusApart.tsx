@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import discovery from 'assets/apart/first.svg'
+import customers from 'assets/apart/Customers.png'
+import dealers from 'assets/apart/Dealers.png'
+import lenders from 'assets/apart/Lenders.png'
+import oem from 'assets/apart/OEMs.png'
+
 import rightDivider from 'assets/right_divider.png'
 import leftDivider from 'assets/left_divider.png'
 
@@ -13,22 +17,22 @@ const values = [
   {
     title: 'OEMs',
     desc: 'Omni-channel financing partner for electric products across wide geographies',
-    cover: discovery,
+    cover: oem,
   },
   {
     title: 'Dealers',
     desc: 'One-stop, quick and convenient financing solution for your business requirements',
-    cover: discovery,
+    cover: dealers,
   },
   {
     title: 'Lenders',
     desc: 'Build a high-quality secured portfolio in an impact oriented new asset class (electric mobility) through our full-service platform',
-    cover: discovery,
+    cover: lenders,
   },
   {
     title: 'Customers',
     desc: 'Quick, convenient and affordable loans for purchasing next-generation electric vehicles',
-    cover: discovery,
+    cover: customers,
   },
 ]
 type IValue = (typeof values)[0]
@@ -51,7 +55,10 @@ export default function SubstainableTransformation() {
   }, [])
 
   return (
-    <section className="bg-blueGreen z-50 blade-top-padding blade-bottom-padding">
+    <section
+      id="why-us"
+      className="bg-blueGreen z-50 blade-top-padding blade-bottom-padding"
+    >
       <div>
         <div className="  pb-3 md:pb-5 lg:pb-7 2xl:pb-10 flex items-center place-items-center text-center ">
           <div className="flex-1 lg:block hidden ">
@@ -71,7 +78,7 @@ export default function SubstainableTransformation() {
             className="grid mx-auto flex-0   px-3 lg:px-10 xl:px-20 gap-3 "
           >
             <span className=" text-3xl lg:text-4xl 2xl:text-5xl block apart-title  font-medium text-transparent bg-clip-text ">
-              What sets us apart
+              Why Prosparity
             </span>
           </div>
 
@@ -199,11 +206,11 @@ function ValueCard({ value }: { value: IValue }) {
   const { title, desc, cover } = value
   return (
     <article className=" value-card ">
-      <div className="h-[250px] md:h-[280px] img-wrapper rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl  lg:h-[350px] xl:h-[400px] overflow-hidden p-2">
+      <div className="mr-auto grid place-content-start">
         <img
           src={cover}
           alt={title}
-          className="h-full w-full object-contain object-center"
+          className="lg:h-[350px] xl:h-[400px] h-[250px] md:h-[280px] w-full object-contain object-center"
         />
       </div>
       <div className="pt-4 md:pt-5 lg:pt-6 xl:pt-7 grid gap-1 md:gap-2">

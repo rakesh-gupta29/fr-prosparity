@@ -3,7 +3,10 @@ import React, { ReactNode } from 'react'
 
 export default function ContactUs() {
   return (
-    <section className="contact-us-wrapper  md:blade-top-padding-sm blade-bottom-padding-lg ">
+    <section
+      id="contact"
+      className="contact-us-wrapper  md:blade-top-padding-sm blade-bottom-padding-lg "
+    >
       <div className="w-container-lg  w-full  grid grid-cols-1 lg:grid-cols-2 md:blade-top-padding-lg">
         <div className="flex flex-col md:pl-4  lg:pl-8 xl:pl-10 2xl:pl-12 justify-start blade-top-padding-lg ">
           <span className="title bg-clip-text text-transparent leading-tight font-medium text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
@@ -43,14 +46,14 @@ function EmailIcon() {
         d="M3.88997 0.908203H24.5566C25.9775 0.908203 27.14 2.0707 27.14 3.49154V18.9915C27.14 20.4124 25.9775 21.5749 24.5566 21.5749H3.88997C2.46914 21.5749 1.30664 20.4124 1.30664 18.9915V3.49154C1.30664 2.0707 2.46914 0.908203 3.88997 0.908203Z"
         stroke="#3AF779"
         strokeWidth="1.5"
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M27.14 3.49414L14.2233 12.5358L1.30664 3.49414"
         stroke="#3AF779"
         strokeWidth="1.5"
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>

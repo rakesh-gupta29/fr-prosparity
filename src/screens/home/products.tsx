@@ -4,7 +4,10 @@ import React from 'react'
 export default function Products() {
   const handleClick = () => console.log('contact us btn clicked')
   return (
-    <section className=" bg-[#FBF9F9] blade-top-padding-lg blade-bottom-padding-lg md:blade-bottom-padding ">
+    <section
+      id="products"
+      className=" bg-[#FBF9F9] blade-top-padding-lg blade-bottom-padding-lg md:blade-bottom-padding "
+    >
       <div
         className="pb-8 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16 2xl:pb-[72px] text-wrapper"
         data-aos="appear-down"
@@ -12,9 +15,9 @@ export default function Products() {
         data-aos-duration="400"
         data-aos-easing="ease-in-out"
       >
-        <h3 className="text-center  products-text-gradient text-transparent bg-clip-text font-medium px-2  ">
+        <h2 className="text-center  products-text-gradient text-transparent bg-clip-text font-medium px-2  ">
           Our Products
-        </h3>
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-none max-w-3xl  mx-auto gap-x-6  lg:gap-x-8 2xl:gap-x-10 gap-y-5 w-container ">

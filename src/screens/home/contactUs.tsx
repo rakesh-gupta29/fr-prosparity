@@ -3,31 +3,26 @@ import React, { ReactNode } from 'react'
 
 export default function ContactUs() {
   return (
-    <section className="contact-us-wrapper">
-      <div className="w-container-lg  w-full  grid grid-cols-1 lg:grid-cols-2">
-        <div className="flex flex-col justify-center">
-          <span className="  title bg-clip-text text-transparent leading-tight font-medium text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+    <section className="contact-us-wrapper  md:blade-top-padding-sm blade-bottom-padding-lg ">
+      <div className="w-container-lg  w-full  grid grid-cols-1 lg:grid-cols-2 md:blade-top-padding-lg">
+        <div className="flex flex-col md:pl-4  lg:pl-8 xl:pl-10 2xl:pl-12 justify-start blade-top-padding-lg ">
+          <span className="title bg-clip-text text-transparent leading-tight font-medium text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
             Join us in the <br className="md:block hidden" /> EV Revolution!
           </span>
-          <ul className="grid gap-3 xl:gap-5 pt-6 lg:pt-8 xl:pt-12 2xl:pt-14">
-            <Card title="Madhya Pradesh" target="#" />
-            <Card title="Madhya Pradesh" target="#" />
-            <Card title="Madhya Pradesh" target="#" />
-          </ul>
 
-          <div className="pt-6 md:pt-8 lg:pt-12 xl:pt-16 grid x gap-4 l:gap-6 ">
+          <div className="pt-6 md:pt-8 lg:pt-12 xl:pt-14 grid x gap-4 l:gap-6 ">
             <span className=" text-white  font-medium text-lg md:text-xl  xl:text-2xl 2xl:text-3xl">
-              Contact Us
+              Contact Info
             </span>
             <Card
               icon={<EmailIcon />}
-              title="kanishk@prosparity.in"
-              target="mailto:kanishk@prosparity.in"
+              title="hello@prosparity.in"
+              target="mailto:hello@prosparity.in"
             />
           </div>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-end md:pr-4 xl:pr-6">
           <ContactForm />
         </div>
       </div>
@@ -37,6 +32,7 @@ export default function ContactUs() {
 function EmailIcon() {
   return (
     <svg
+      className=" h-auto object-contain w-4 md:w-5 lg:w-6"
       width="28"
       height="23"
       viewBox="0 0 28 23"
@@ -71,12 +67,11 @@ function Card({
   target: string
 }) {
   return (
-    <li className="flex items-center gap-3">
+    <li className="flex items-center gap-2 md:gap-3">
       <div>
         {icon ?? (
           <svg
-            width={22}
-            height={28}
+            className=" h-auto   object-contain  w-5 md:w-6 lg:w-7"
             viewBox="0 0 22 28"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

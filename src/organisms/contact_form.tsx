@@ -61,14 +61,14 @@ export default function Form() {
     }
   }
   return (
-    <section className="blade-top-padding-lg blade-bottom-padding-lg">
-      <section className="">
+    <section className=" w-full max-w-[700px]">
+      <section className="w-full">
         <div>
-          <div className="rounded-xl md:rounded-2xl lg:rounded-3xl xl:rounded-[32px]  border-[3px] border-solid border-opacity-20 border-white form-wrapper">
+          <div className="rounded-xl w-full  md:rounded-2xl lg:rounded-3xl xl:rounded-[32px]  border-1 md:border-[2px] border-solid border-opacity-20 border-white form-wrapper">
             <form
               noValidate
               onSubmit={handleSubmit(onSubmit)}
-              className="max-w-screen-sm mx-auto grid  gap-4 p-10  md:gap-7"
+              className=" w-full grid gap-4 p-2  md:p-4 lg:p-6 xl:p-8 2xl:p-10  md:gap-7"
             >
               <div className="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-4">
                 <div>
@@ -77,9 +77,9 @@ export default function Form() {
                     className="grid gap-1 text-base md:text-lg"
                   >
                     <input
-                      className="pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
+                      className="pl-2 lg:pl-4 xl:pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent  text-sm md:text-base xl:text-lg py-3 lg:py-4"
                       id="firstName"
-                      placeholder="Enter First Name"
+                      placeholder="Enter first name"
                       {...register('firstName')}
                     />
                     {errors.email && (
@@ -94,9 +94,9 @@ export default function Form() {
                     className="grid gap-1 text-base md:text-lg"
                   >
                     <input
-                      className="pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
+                      className="pl-2 lg:pl-4 xl:pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent  text-sm md:text-base xl:text-lg py-3 lg:py-4"
                       id="lastName"
-                      placeholder="Enter Last Name"
+                      placeholder="Enter last name"
                       {...register('lastName')}
                     />
                     {errors.email && (
@@ -111,12 +111,11 @@ export default function Form() {
                   htmlFor="email"
                   className="grid gap-1 text-base md:text-lg"
                 >
-                  <div className="outline-none focus-visible:outline-none  focus-within:bg-white focus-within:text-black focus-within:placeholder-black focus-within:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 focus-within:stroke-black stroke-white border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg pl-5  pr-3 flex gap-3">
+                  <div className="outline-none focus-visible:outline-none  focus-within:bg-white focus-within:text-black focus-within:placeholder-black focus-within:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 focus-within:stroke-black stroke-white border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg pl-2 md:pl-3 lg:pl-5 py-1 pr-3 flex gap-3">
                     <div className="grid place-content-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
+                        className=" h-5 w-5 lg:h-6 lg:w-6"
                         viewBox="0 0 25 25"
                         fill="none"
                       >
@@ -138,7 +137,9 @@ export default function Form() {
                     </div>
 
                     <input
-                      className=" text-inherit  focus-visible:placeholder-black focus-visible:placeholder-opacity-30 placeholder-opacity-30 placeholder-white flex-1 w-full border-none outline-none focus:outline-none focus-visible:outline-none  placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-5"
+                      className=" text-inherit  focus-visible:placeholder-black focus-visible:placeholder-opacity-30 
+                      placeholder-opacity-30 placeholder-white flex-1 w-full border-none outline-none focus:outline-none focus-visible:outline-none 
+                       placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-sm md:text-base xl:text-lg py-2 lg:py-4"
                       id="email"
                       type="email"
                       inputMode="email"
@@ -157,7 +158,7 @@ export default function Form() {
                   className="grid gap-1 text-base md:text-lg"
                 >
                   <input
-                    className="pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
+                    className="pl-2 lg:pl-4 xl:pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent  text-sm md:text-base xl:text-lg py-3 lg:py-4"
                     type="number"
                     id="phone"
                     inputMode="numeric"
@@ -179,18 +180,18 @@ export default function Form() {
                     rows={7}
                     cols={5}
                     id="message"
-                    className="pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent text-base xl:text-lg  py-4"
+                    className="pl-2 lg:pl-4 xl:pl-6 outline-none focus-visible:outline-none  focus-visible:bg-white focus-visible:text-black focus-visible:placeholder-black focus-visible:placeholder-opacity-30   focus:bg-white focus:text-black focus:placeholder-black focus:placeholder-opacity-30 text-white border-white border-1 border-solid focus-visible:borde-opacity-100 border-opacity-50 rounded lg:rounded-lg w-full placeholder:text-white placeholder:text-opacity-60 font-regular  bg-transparent  text-sm md:text-base xl:text-lg py-3 lg:py-4"
                     placeholder="Hey. say something"
                     {...register('message')}
                   />
                 </label>
               </div>
 
-              <div>
+              <div className="pb-3 md:pb-0">
                 <button
                   type="submit"
-                  className="rounded-full py-3 px-7  bg-[#3AF779] border-1 border-solid border-[#0B373C] text-[#0B373C] hover:outline-[#3AF779] outline outline-2 outline-solid outline-offset-2 outline-transparent hover:text-blueGreen focus-visible:outline-[#3AF779] transition-all duration-300 ease-in-out
-               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+                  className="rounded-full py-2 md:py-3 px-6 md:px-7  bg-[#3AF779] border-1 border-solid border-[#0B373C] text-[#0B373C] hover:outline-[#3AF779] outline outline-2 outline-solid outline-offset-2 outline-transparent hover:text-blueGreen focus-visible:outline-[#3AF779] transition-all duration-300 ease-in-out
+               text-sm md:text-base xl:text-lg 2xl:text-xl font-regular font-semibold  tracking-wide "
                 >
                   Contact us
                 </button>

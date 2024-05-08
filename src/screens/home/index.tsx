@@ -9,17 +9,25 @@ import Teams from './teams'
 import './home.css'
 import { ContactForm } from 'organisms/index'
 import ContactUs from './contactUs'
+import Investors from './investors'
+import SustainableMobility from './sustaibableMobility'
+import WhatsetsUsApart from './whatSetsusApart'
+import HeroUpdated from './heroUpdated'
 
 export default function PageHome() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <HeroUpdated />
       <Products />
-      <WhatWeDo />
-      <Features />
-      <Problems />
+      {/* <WhatWeDo /> */}
+      <WhatsetsUsApart />
+      <SustainableMobility />
+      {/* <Features /> */}
+      {/* <Problems /> */}
       {/* <Offerings /> */}
       <Teams />
+      <Investors />
       <ContactUs />
     </>
   )

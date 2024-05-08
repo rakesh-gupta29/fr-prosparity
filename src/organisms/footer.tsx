@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="min-h-[500px] blade-top-padding-lg blade-bottom-padding-lg">
+    <footer className=" min-h-[300px] lg:min-h-[500px] blade-top-padding-lg blade-bottom-padding-lg">
       <div className="w-container">
-        <div className=" grid place-items-start gap-12">
+        <div className=" grid place-items-start  gap-6  md:gap-8  xl:gap-10  2xl:gap-12">
           <div>
             <img
               src={logo}
@@ -14,7 +14,7 @@ export default function Footer() {
               className="h-10 md:h-12 lg:h-14 w-full object-contain object-center"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-6 max-w-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-3 md:gap-y-6 max-w-lg">
             <TextAnchor href="#contact" title="Contact us" />
             <TextAnchor href="#product" title="Products" />
             <TextAnchor href="#offerings" title="Offerings" />
@@ -56,10 +56,16 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <div className="flex gap-10 pt-3 md:pt-4 xl:pt-6">
+          <div className="flex gap-4 md:gap-6 xl:gap-8 2xl:gap-10 pt-3 md:pt-4 xl:pt-6">
             <TextAnchor href="/privacy" title="Privacy" />
             <TextAnchor href="/terms-and-conditions" title="Terms" />
-            <span className="font-medium text-white text-opacity-30">
+            <span className="font-medium text-white md:block hidden text-opacity-30">
+              Copyright © 2024 Prospartiy
+            </span>
+          </div>
+
+          <div>
+            <span className="text-sm font-medium text-white md:hidden block text-opacity-30">
               Copyright © 2024 Prospartiy
             </span>
           </div>
@@ -73,7 +79,7 @@ function TextAnchor({ title, href }: { title: string; href: string }) {
   return (
     <Link
       to={href}
-      className="text-[#E3FFCC] text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font"
+      className="text-[#E3FFCC]  text-[12px] md:text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font"
     >
       {title}
     </Link>

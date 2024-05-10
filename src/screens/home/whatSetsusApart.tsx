@@ -10,7 +10,6 @@ import leftDivider from 'assets/left_divider.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation } from 'swiper'
 import 'swiper/css'
-import 'swiper/css/autoplay'
 import 'swiper/css/navigation'
 
 const values = [
@@ -92,27 +91,30 @@ export default function SubstainableTransformation() {
           </div>
         </div>
       </div>
-      <div className="blade-top-padding-xl mt-2 md:pt-4 blade-bottom-padding-xl">
+      <div className=" blade-bottom-padding-xl">
         <div className="w-11/12 xl:w-11/12 2xl:w-10/12 pl-3 blade-top-margin-sm 2xl:mb-8 mb-6 block ml-auto sm:mr-0 mr-auto"></div>
         <div className="md:w-11/12 xl:w-11/12 2xl:w-10/12 values-carousel ml-auto pl-3 ">
           <Swiper
             ref={swiperImageRef}
-            modules={[Autoplay, Navigation]}
+            modules={[Navigation]}
             navigation={{
               prevEl: '.value-prev-btn',
               nextEl: '.value-next-btn',
             }}
-            slidesPerView={1}
+            slidesPerView={1.05}
             spaceBetween={20}
             pagination={false}
             breakpoints={{
+              480: {
+                slidesPerView: 1.4,
+              },
               640: {
-                slidesPerView: 1.5,
+                slidesPerView: 2.1,
                 slidesPerGroup: 1,
                 spaceBetween: 20,
               },
               1020: {
-                slidesPerView: 2,
+                slidesPerView: 2.5,
                 slidesPerGroup: 2,
                 spaceBetween: 20,
               },
@@ -127,9 +129,6 @@ export default function SubstainableTransformation() {
                 spaceBetween: 20,
               },
             }}
-            autoplay={{
-              delay: 3000,
-            }}
             slideToClickedSlide
             autoHeight
             speed={1000}
@@ -141,7 +140,7 @@ export default function SubstainableTransformation() {
                 return (
                   <SwiperSlide
                     key={key}
-                    className="min-h-full  h-full self-stretch"
+                    className="min-h-full h-full self-stretch"
                   >
                     <ValueCard value={elem} />
                   </SwiperSlide>
@@ -206,14 +205,14 @@ function ValueCard({ value }: { value: IValue }) {
   const { title, desc, cover } = value
   return (
     <article className=" value-card ">
-      <div className="mr-auto grid place-content-start">
+      <div className="mr-auto  grid place-content-start">
         <img
           src={cover}
           alt={title}
-          className="lg:h-[350px] xl:h-[400px] h-[250px] md:h-[280px] w-full object-contain object-center"
+          className="xl:h-[330px] 2xl:h-[380px] h-[250px] lg:h-[290px] md:h-[280px] w-full object-contain object-center"
         />
       </div>
-      <div className="pt-4 md:pt-5 lg:pt-6 xl:pt-7 grid gap-1 md:gap-2">
+      <div className="pt-1 sm:pt-4 md:pt-5 lg:pt-6 xl:pt-7 grid gap-1 md:gap-2">
         <span className="text-2xl lg:text-3xl font-medium  title ">
           {title}{' '}
         </span>

@@ -257,19 +257,11 @@
 
 /*  footer */
 footer {
-  background: url('assets/footer-bg.svg'),
-    linear-gradient(to bottom, #061c23, #061c23),
+  background: linear-gradient(to bottom, #061c23, #061c23),
     linear-gradient(to bottom, #08272b, #08272b);
-  background-size: 300px auto, contain, cover;
-  background-position: 80% center, center, center;
+  background-size: contain, cover;
+  background-position: center, center;
   background-repeat: no-repeat;
-}
-
-@media screen and (max-width: 768px) {
-  footer {
-    background-size: 130px auto, contain, cover;
-    background-position: 90% 75%, center, center;
-  }
 }
 
 .investors-wrapper .tile {

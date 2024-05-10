@@ -184,14 +184,12 @@ function Teams() {
                         </a>
                       </div>
 
-                      <div className=" flex items-end justify-end pb-4 pr-4 flex-1">
-                        <div className="flex-0 pb-0   flex items-end gap-3 md:gap-4 lg:gap-5">
+                      <div className=" flex-1 ml-auto  md:max-w-[220px] flex items-end justify-end pb-4 pr-1">
+                        <div className="flex-0 pb-0 flex items-end gap-3 md:gap-4 lg:gap-5">
                           <button
-                            onClick={() => {
-                              setModal(0)
-                            }}
+                            onClick={() => setModal(0)}
                             type="button"
-                            className="outline-none  focus-visible:outline-none rounded-full bg-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid border-darkGreen hover:stroke-white stroke-darkGreen transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  2xl:w-20 2xl:h-20 aspect-square"
+                            className="outline-none  focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -210,11 +208,9 @@ function Teams() {
                           </button>
 
                           <button
-                            onClick={() => {
-                              setModal(1)
-                            }}
+                            onClick={() => setModal(1)}
                             type="button"
-                            className="outline-none  focus-visible:outline-none rounded-full bg-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid border-darkGreen hover:stroke-white stroke-darkGreen transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  2xl:w-20 2xl:h-20 aspect-square"
+                            className="outline-none   focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"

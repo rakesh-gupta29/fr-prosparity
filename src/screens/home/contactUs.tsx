@@ -86,9 +86,12 @@ function Card({
           </svg>
         )}
       </div>
-      <span className="text-[#E3FFCC] text-base md:text-lg xl:text-xl 2xl:text-2xl font-regular">
-        {title}{' '}
-      </span>
+      <a
+        href={target}
+        className="text-[#E3FFCC] outline-none focus-visible:outline-none hover:underline underline-offset-2 decoration-inherit  focus-visible:underline text-base md:text-lg xl:text-xl 2xl:text-2xl font-regular"
+      >
+        {title}
+      </a>
     </li>
   )
 }

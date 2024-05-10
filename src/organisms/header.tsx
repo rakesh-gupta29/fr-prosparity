@@ -58,12 +58,12 @@ export default function Header() {
           isNavFixed ? 'bg-blueGreen' : 'bg-transparent'
         }  fixed left-0 top-0 right-0 py-2  md:py-3 lg:py-5 z-[999]`}
       >
-        <nav className="w-container flex justify-between gap-x-10 items-center">
+        <nav className=" w-container-lg 2xl:w-container flex justify-between gap-x-10 items-center">
           <a className="grid lg:basis-80 grow-0 shrink  " href="#hero">
             <img
               src={logo}
               alt="logo for prosparity"
-              className="h-8 md:h-10 lg:h-12 xl:h-14 w-full object-contain object-center"
+              className="h-8 md:h-10 lg:h-12 2xl:h-14 w-full object-contain object-center"
             />
           </a>
 
@@ -78,8 +78,8 @@ export default function Header() {
             <a
               href="#contact"
               onClick={handleClick}
-              className="rounded-full py-3 px-7  bg-[#0B373C] border-1 border-solid border-[#0B373C]  hover:bg-[#0B373C] hover:text-[#E3FFCC]  text-[#E3FFCC] transition-all duration-300 ease-in-out
-               text-base md:text-lg xl:text-xl font-regular font-semibold  tracking-wide "
+              className="rounded-full  py-2 2xl:py-3  px-5 2xl:px-7  bg-[#0B373C] border-1 border-solid border-[#0B373C]  hover:bg-[#0B373C] hover:text-[#E3FFCC]  text-[#E3FFCC] transition-all duration-300 ease-in-out
+               text-base md:text-lg 2xl:text-xl font-regular font-semibold  tracking-wide "
             >
               Contact us
             </a>

@@ -94,6 +94,9 @@ export default function Header() {
             }  xl:hidden block`}
             onClick={toggleState}
           >
+            <span className="sr-only">
+              click to toggle the mobile navigation modal
+            </span>
             <svg
               strokeWidth="0"
               viewBox="0 0 20 20"

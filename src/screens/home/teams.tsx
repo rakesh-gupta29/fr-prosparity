@@ -139,6 +139,9 @@ function Teams() {
                             className="bg-black mt-1 lg:grid  stroke-white transition-all duration-300 ease-in-out hidden place-content-center hover:bg-greenChip hover:stroke-black
                              aspect-square h-10 w-10 xl:h-12 xl:w-12 rounded-full "
                           >
+                            <span className="sr-only">
+                              click to move to next slide
+                            </span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -191,6 +194,10 @@ function Teams() {
                             type="button"
                             className="outline-none  focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
                           >
+                            <span className="sr-only">
+                              click to move to prev slide
+                            </span>
+
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -212,6 +219,10 @@ function Teams() {
                             type="button"
                             className="outline-none   focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
                           >
+                            <span className="sr-only">
+                              click to move to next slide
+                            </span>
+
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"

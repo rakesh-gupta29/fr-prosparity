@@ -33,6 +33,7 @@ export default function HeroUpdated() {
         </div>
         <div className="basis-56 grow shrink ">
           <img
+            loading="eager"
             src={banner}
             className="h-full w-full object-contain object-center"
             alt="diagram showing the prosparity logo"

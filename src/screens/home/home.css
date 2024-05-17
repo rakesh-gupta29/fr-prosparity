@@ -297,3 +297,28 @@ footer {
 .apart-title {
   background-image: linear-gradient(180deg, #fff 17.89%, #3af779 233.81%);
 }
+
+.swiper-pagination-progress {
+  height: 3px !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-progress .swiper-pagination-progressbar-fill {
+  background: white !important;
+}
+
+.content-wrapper p {
+  @apply font-normal font-regular leading-relaxed pb-6 md:pb-8 text-sm md:text-lg;
+}
+
+.content-wrapper h4 {
+  @apply capitalize pt-4 font-medium leading-relaxed pb-3 md:pb-4;
+}
+
+.content-wrapper ol {
+  @apply list-decimal pl-10 space-y-2 font-normal font-regular leading-relaxed pb-6 md:pb-8 text-sm md:text-lg;
+}
+
+.content-wrapper .no-bullets {
+  @apply list-none pl-10 space-y-2 font-normal font-regular leading-relaxed pb-6 md:pb-8 text-sm md:text-lg;
+}

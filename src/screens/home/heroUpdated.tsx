@@ -11,7 +11,7 @@ export default function HeroUpdated() {
         <div className="blade-top-padding blade-top-margin-sm pl-3 sm:pl-10 md:pl-20  lg:pl-32 xl:pl-32 2xl:pl-48 basis-0 grow shrink flex-1">
           <div className="font-medium text-2xl  w-10/12  text-white lg:text-3xl 2xl:text-4xl leading-tight">
             <span className="text-[#3BFE7B] ">Reimagining Distribution</span> Of
-            Credit In Electric Mobility Sector
+            Credit In The Electric Mobility Sector
           </div>
           <span className="text-sm block w-11/12  max-w-xl md:text-base   pt-4 lg:pt-6 lg:text-lg 2xl:text-xl text-white font-light ">
             We are building a full-stack digital financing platform to enable

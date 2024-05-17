@@ -6,21 +6,15 @@ export default function Products() {
   return (
     <section
       id="products"
-      className=" bg-[#FBF9F9] blade-top-padding-lg blade-bottom-padding-lg md:blade-bottom-padding "
+      className=" bg-[#FBF9F9] blade-top-padding-lg blade-bottom-padding-lg md:blade-bottom-padding-lg "
     >
-      <div
-        className="pb-8 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16 2xl:pb-[72px] text-wrapper"
-        data-aos="appear-down"
-        data-aos-offset="300"
-        data-aos-duration="400"
-        data-aos-easing="ease-in-out"
-      >
+      <div className="pb-8 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16 2xl:pb-[72px] text-wrapper">
         <h2 className="text-center  products-text-gradient text-transparent bg-clip-text font-medium px-2  ">
           Our Products
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-none max-w-3xl  mx-auto gap-x-6  lg:gap-x-8 2xl:gap-x-10 gap-y-5 w-container ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:max-w-none max-w-3xl  mx-auto gap-x-6 lg:gap-x-8 2xl:gap-x-10 gap-y-5 w-container ">
         <article className="lg:rounded-2xl  md:rounded-xl rounded-xl relative  xl:rounded-3xl 2xl:rounded-[28px]  hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100  outline outline-2 outline-solid hover:outline-gray  outline-transparent   p-5 md:p-5 lg:p-7 xl:p-9 2xl:p-12  h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] 2xl:h-[590px] overflow-hidden product-card-wrapper three_wheeler-card">
           <div className="absolute  md:hidden block inset-0 bg-gradient-to-b from-white via-[rgba(255,255,255,0.7)] to-transparent"></div>
 
@@ -32,9 +26,9 @@ export default function Products() {
               Get loans for efficient and eco-friendly{' '}
               <br className="md:block hidden" /> options for last-mile
               transportation <br className="md:block hidden" />
-              needs.
+              needs
             </span>
-            <div className="grid place-content-start  pt-3  md:pt-6 lg:pt-7 ">
+            {/* <div className="grid place-content-start  pt-3  md:pt-6 lg:pt-7 ">
               <button
                 type="button"
                 onClick={handleClick}
@@ -43,7 +37,7 @@ export default function Products() {
               >
                 Contact us
               </button>
-            </div>
+            </div> */}
           </div>
         </article>
 
@@ -57,9 +51,9 @@ export default function Products() {
             <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-normal leading-snug">
               Avail loans for reliable and convenient{' '}
               <br className="md:block hidden" /> electric scooters for urban and{' '}
-              <br className="md:block hidden" /> rural commuting.
+              <br className="md:block hidden" /> rural commuting
             </span>
-            <div className="grid place-content-start  pt-3 md:pt-6 lg:pt-7 ">
+            {/* <div className="grid place-content-start  pt-3 md:pt-6 lg:pt-7 ">
               <button
                 type="button"
                 onClick={handleClick}
@@ -68,12 +62,12 @@ export default function Products() {
               >
                 Contact us
               </button>
-            </div>
+            </div> */}
           </div>
         </article>
       </div>
 
-      <div className="lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container pt-4 md:pt-6 lg:pt-8 xl:pt-10  ">
+      <div className="lg:max-w-none max-w-3xl mx-auto gap-x-10 gap-y-5 w-container pt-4 md:pt-6  pb-4 md:pb-6 lg:pb-8 xl:pb-10 lg:pt-8 xl:pt-10  ">
         <article
           className="h-[300px] md:h-[330px] lg:h-[360px] xl:h-[420px] 2xl:h-[540px]  flex flex-col gap-y-5 product-card-wrapper   
         hover:border-opacity-100 transition-all duration-300 ease-in-out hover:scale-[0.99] scale-100  outline outline-2 outline-solid hover:outline-gray  outline-transparent      
@@ -83,14 +77,14 @@ export default function Products() {
 
           <div className="flex flex-col gap-3 flex-1 relative  ">
             <span className="text-2xl lg:text-3xl font-medium text-black leading-tight">
-              Dealer Financing:
+              Dealer Financing
             </span>
-            <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl max-w-sm 2xl:max-w-[550px] font-regular font-normal leading-snug">
+            <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl max-w-sblock max-w-[320px] 2xl:max-w-[450px] font-regular font-normal leading-snug">
               With competitive rates and selective assessment criteria, we
               empower dealers to grow their businesses while fostering strong,
-              mutually beneficial relationships.
+              mutually beneficial relationships
             </span>
-            <div className="grid place-content-start  pt-3 md:pt-6 lg:pt-7 ">
+            {/* <div className="grid place-content-start  pt-3 md:pt-6 lg:pt-7 ">
               <button
                 type="button"
                 onClick={handleClick}
@@ -99,7 +93,7 @@ export default function Products() {
               >
                 Contact us
               </button>
-            </div>
+            </div> */}
           </div>
         </article>
       </div>

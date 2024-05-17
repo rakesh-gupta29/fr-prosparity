@@ -14,8 +14,8 @@ export default function SustainableMobility() {
           // data-aos-easing="ease-in-out"
           className="what-we-do-wrapper 2xl:rounded-[40px]  rounded-[20px] lg:rounded-[30px] max-w-[1400px] mx-auto md:w-11/12 xl:w-10/12 px-1.5 lg:px-3 py-1.5 lg:py-3 overflow-hidden"
         >
-          <div className="flex flex-col lg:flex-row gap-y-2 xl:gap-16  w-full 2xl:gap-x-20 ">
-            <div className="   h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] 2xl:h-[580px] flex-1 overflow-hidden   rounded-[14px] lg:rounded-[22px] 2xl:rounded-[32px]">
+          <div className="flex flex-col lg:flex-row gap-y-2  lg:gap-12 xl:gap-16  w-full 2xl:gap-x-20 ">
+            <div className="   h-[350px] sm:h-[400px] md:h-[450px] lg:h-[460px] xl:h-[550px] 2xl:h-[580px] flex-1 overflow-hidden   rounded-[14px] lg:rounded-[22px] 2xl:rounded-[32px]">
               <div className="overflow-hidden h-full rounded-[14px] lg:rounded-[22px] 2xl:rounded-[32px]  ">
                 <img
                   src={check}

@@ -5,7 +5,7 @@ type Props = { children: ReactNode }
 type Anchor = { children: ReactNode; href: string }
 
 function Heading1({ children }: Props) {
-  return <h1 className="">{children}</h1>
+  return <h1>{children}</h1>
 }
 
 function Heading2({ children }: Props) {
@@ -17,29 +17,29 @@ function Heading3({ children }: Props) {
 }
 
 function Heading4({ children }: Props) {
-  return <h4 className="">{children}</h4>
+  return <h4>{children}</h4>
 }
 
 function Heading5({ children }: Props) {
   return <h5 className=" ">{children}</h5>
 }
 function Heading6({ children }: Props) {
-  return <h6 className="">{children}</h6>
+  return <h6>{children}</h6>
 }
 
 function ListItem({ children }: Props) {
-  return <li className="">{children}</li>
+  return <li>{children}</li>
 }
 function OrderedList({ children }: Props) {
-  return <ol className="">{children}</ol>
+  return <ol>{children}</ol>
 }
 
 function UnorderedList({ children }: Props) {
-  return <ul className="">{children}</ul>
+  return <ul>{children}</ul>
 }
 
 function Para({ children }: Props) {
-  return <p className="">{children}</p>
+  return <p>{children}</p>
 }
 
 const markdownConfig = {

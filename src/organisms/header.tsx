@@ -59,7 +59,10 @@ export default function Header() {
         }  fixed left-0 top-0 right-0 py-2  md:py-3 lg:py-5 z-[999]`}
       >
         <nav className=" w-container-lg 2xl:w-container flex justify-between gap-x-10 items-center">
-          <a className="grid lg:basis-80 grow-0 shrink  " href="#hero">
+          <a
+            className="grid lg:basis-80 place-content-start grow-0 shrink  "
+            href="/#hero"
+          >
             <img
               src={logo}
               alt="logo for prosparity"
@@ -68,13 +71,12 @@ export default function Header() {
           </a>
 
           <div className=" flex-1 items-center justify-center gap-x-7  md:flex hidden">
-            <TextAnchor href="#products" title="Our products" />
+            <TextAnchor href="#products" title="Products" />
             <TextAnchor href="#why-us" title="Why us" />
-            <TextAnchor href="#teams" title="About us" />
-            <TextAnchor href="#investors" title="Our Investors" />
+            <TextAnchor href="#investors" title="Investors" />
           </div>
 
-          <div className="lg:basis-80 lg:flex hidden grow-0 shrink   justify-end">
+          <div className="lg:basis-80 lg:flex hidden grow-0 shrink justify-end">
             <a
               href="#contact"
               onClick={handleClick}

@@ -8,9 +8,10 @@ import rightDivider from 'assets/right_divider.png'
 import leftDivider from 'assets/left_divider.png'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Navigation } from 'swiper'
+import { Autoplay, Navigation, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 const values = [
   {
@@ -77,7 +78,7 @@ export default function SubstainableTransformation() {
             className="grid mx-auto flex-0   px-3 lg:px-10 xl:px-20 gap-3 "
           >
             <span className=" text-3xl lg:text-4xl 2xl:text-5xl block apart-title  font-medium text-transparent bg-clip-text ">
-              Why Prosparity
+              Why ProsParity
             </span>
           </div>
 
@@ -96,14 +97,13 @@ export default function SubstainableTransformation() {
         <div className="md:w-11/12 xl:w-11/12 2xl:w-10/12 values-carousel ml-auto pl-3 ">
           <Swiper
             ref={swiperImageRef}
-            modules={[Navigation]}
+            modules={[Navigation, Pagination]}
             navigation={{
               prevEl: '.value-prev-btn',
               nextEl: '.value-next-btn',
             }}
             slidesPerView={1.05}
             spaceBetween={20}
-            pagination={false}
             breakpoints={{
               480: {
                 slidesPerView: 1.4,
@@ -129,6 +129,10 @@ export default function SubstainableTransformation() {
                 spaceBetween: 20,
               },
             }}
+            pagination={{
+              el: '.swiper-pagination-progress',
+              type: 'progressbar',
+            }}
             slideToClickedSlide
             autoHeight
             speed={1000}
@@ -147,11 +151,12 @@ export default function SubstainableTransformation() {
                 )
               })}
             </div>
-            <span className="swiper-pagination gap-1 !bottom-0" />
           </Swiper>
         </div>
         <div className=" px-2 md:w-11/12 xl:w-11/12 2xl:w-10/12  flex items-center  gap-0   pt-3 md:pt-4 xl:pt-6 md:gap-10 pr-6 sm:pr-10 md:pr-16  lg:pr-20 xl:pr-24 2xl:pr-28 lg:gap-14 xl:gap-16 pl-3 ml-auto">
-          <div className="flex-1 h-[2px] bg-white bg-opacity-50 md:block hidden"></div>
+          <div className="flex-1 h-[2px] bg-white relative bg-opacity-50 md:block hidden">
+            <div className="swiper-pagination-progress"></div>
+          </div>
           <div className=" flex-1 md:max-w-[220px] flex items-end justify-end pb-4 pr-1">
             <div className="flex-0 pb-0 flex items-end gap-3 md:gap-4 lg:gap-5">
               <button

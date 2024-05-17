@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 
-import saurabh from 'assets/team1.png'
-import anni from 'assets/team2.png'
+import saurabh from 'assets/team1.JPG'
+import anni from 'assets/team2.JPG'
 import { Dialog, Transition } from '@headlessui/react'
 
 const members = [
@@ -9,7 +9,7 @@ const members = [
     name: 'Saurabh Khodke',
     designation: 'Co-Founder and CEO',
     coverImage: saurabh,
-    desc: 'Saurabh is an MBA graduate from IIFM and boasts over 12 years of experience and currently holds positions as Co-Founder and CEO at both Northern Arc and Stashfin. His expertise lies in capital raising, strategic planning, and a deep understanding of vehicle and consumer lending domains.',
+    desc: 'Saurabh boasts over 12 years of expertise in origination, credit, and debt capital markets. During his tenure at Northern Arc Capital, he was instrumental in establishing the consumer lending asset class and leading the vehicle finance asset class. At ProsParity, Saurabh leads fundraising, finance, strategy, risk management, and overall organizational development, skillfully blending technology, consumer credit, and asset financing. He holds an MBA from IIFM-Bhopal.',
     profileURL:
       'https://www.linkedin.com/in/saurabh-khodke-80694240/?originalSubdomain=in',
   },
@@ -17,7 +17,7 @@ const members = [
     name: 'Anirudh Dhakar',
     designation: 'Co-Founder and COO',
     coverImage: anni,
-    desc: 'Anirudh is an MBA alumnus from IIFM and brings over 12 years of experience to his roles as Co-Founder and COO at Northern Arc, SBI, and Stashfin. His core strengths include adeptly managing platforms and overseeing business tech operations.',
+    desc: 'Anirudh brings over a decade of experience to the table, having worked with SBI, Northern Arc Capital, and more. His expertise lies in crafting and scaling lending platforms, harmonizing multiple stakeholders seamlessly, and maintaining high standards in processes, credit quality, and compliance. Known for his successful collaborations with various fintech lending firms, Anirudh is leading ProsParity towards becoming a top-tier lending platform in asset financing. He excels in driving sales, credit, technology, and product strategies with finesse. Anirudh holds an MBA from IIFM-Bhopal.',
     profileURL: 'https://www.linkedin.com/in/anirudh-dhakar-78979a4b/',
   },
 ]
@@ -30,7 +30,7 @@ export default function TeamAndVision() {
       <div id="teams">
         <div className="grid px-3 text-center teams-wrapper  place-content-center blade-top-padding-lg">
           <span className="text-3xl md:text-4xl 2xl:text-5xl title  font-medium text-transparent bg-clip-text ">
-            Who we are
+            About us
           </span>
         </div>
       </div>
@@ -122,7 +122,7 @@ function Teams() {
                         className="h-full w-full object-cover object-right-top"
                       />
                     </div>
-                    <div className="flex  flex-1  pr-10  flex-col">
+                    <div className="flex  flex-1  pr-10   flex-col">
                       <div className="flex-1">
                         <div className="flex justify-between items-center  gap-x-6">
                           <div className="flex-1  pt-3 md:pt-4 lg:pt-6 flex flex-col justify-center">
@@ -155,8 +155,8 @@ function Teams() {
                             </svg>
                           </button>
                         </div>
-                        <div className="max-w-md pt-3  md:pt-6">
-                          <span className="text-sm md:text-base lg:text-lg xl:text-xl font-regular leading-normal block">
+                        <div className="max-w-lg pt-3  md:pt-6 ">
+                          <span className="text-sm md:text-base lg:text-lg xl:text-base font-regular leading-normal block">
                             {members[modal].desc}
                           </span>
                         </div>
@@ -267,13 +267,14 @@ function Card({
   return (
     <article className="member-card  max-w-[538px]  hover:border-opacity-100 transition-all duration-300 ease-in-out   mx-auto ">
       <div
-        className="h-[360px]  md:h-[400px] xl:h-[450px] 2xl:h-[540px] w-full hover:border-opacity-100 transition-all 
+        onClick={() => callback(index)}
+        className=" cursor-pointer h-[360px]  md:h-[400px] xl:h-[450px] 2xl:h-[540px] w-full hover:border-opacity-100 transition-all 
       duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  
       rounded-xl  md:rounded-[24px] lg:rounded-[30px] xl:rounded-[40px] overflow-hidden"
       >
         <img
           src={coverImage}
-          className="w-full h-full object-right-top object-cover "
+          className="w-full h-full object-top object-cover "
           alt={`${name} - team member of Prosparity`}
         />
       </div>

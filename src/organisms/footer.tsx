@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="w-container">
         <div className="flex flex-col md:flex-row  md:items-center gap-x-6 justify-between ">
           <div className=" flex items-center md:grid  justify-between  place-content-start md:pb-0 pb-7">
-            <div className="grid place-content-start flex-1 ">
+            <div className="grid place-content-start  place-items-start flex-1 ">
               <img
                 src={logo}
                 alt="logo for prosparity"
@@ -71,11 +71,10 @@ export default function Footer() {
 
           <div className=" flex md:flex-row flex-col-reverse md:items-center justify-end  gap-6 md:gap-8 xl:gap-10 pt-2 ">
             <div className="flex  md:flex-row flex-col-reverse  gap-3  md:gap-5 xl:gap-8 md:items-center h-full 2xl:gap-10 ">
-              <TextAnchor href="/privacy" title="Privacy Policy" disabled />
+              <TextAnchor href="/privacy-policy" title="Privacy Policy" />
               <TextAnchor
                 href="/terms-and-conditions"
                 title="Terms & Conditions"
-                disabled
               />
             </div>
             <div className="md:block hidden">

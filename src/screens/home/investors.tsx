@@ -18,25 +18,59 @@ export default function Investors() {
       </div>
       <div className="max-w-screen-xl mx-auto blade-bottom-padding-lg">
         <div className="grid grid-cols-2  md:grid-cols-3 px-2 lg:grid-cols-5 gap-y-2 gap-x-4 md:gap-5 lg:gap-7  xl:gap-9">
-          <Tile icon={one} title="logo of invesor in the Prosparity" />
-          <Tile icon={three} title="logo of invesor in the Prosparity" />
-          <Tile icon={four} title="logo of invesor in the Prosparity" />
-          <Tile icon={five} title="logo of invesor in the Prosparity" />
-          <Tile icon={two} title="logo of invesor in the Prosparity" />
+          <Tile
+            icon={one}
+            target="https://www.beenext.com/"
+            title="logo of invesor in the Prosparity"
+          />
+          <Tile
+            icon={three}
+            target="https://www.sparrowvc.com/"
+            title="logo of invesor in the Prosparity"
+          />
+          <Tile
+            icon={four}
+            target="https://allincapital.vc/"
+            title="logo of invesor in the Prosparity"
+          />
+          <Tile
+            icon={five}
+            target="https://www.devc.com/"
+            title="logo of invesor in the Prosparity"
+          />
+          <Tile
+            icon={two}
+            target="https://www.huddleventures.vc/"
+            title="logo of invesor in the Prosparity"
+          />
         </div>
       </div>
     </div>
   )
 }
 
-function Tile({ title, icon }: { title: string; icon: string }) {
+function Tile({
+  title,
+  icon,
+  target,
+}: {
+  target: string
+  title: string
+  icon: string
+}) {
   return (
-    <article className="grid place-content-center">
-      <img
-        src={icon}
-        alt={title}
-        className="w-full max-w-[300px] md:h-[130px] lg:h-[150px]  object-contain object-center"
-      />
-    </article>
+    <a
+      href={target}
+      target="_blank"
+      className="focus-visible:outline-blueGreen outline-offset-2 focus-visible:outline-offset-2  "
+    >
+      <article className="grid place-content-center ">
+        <img
+          src={icon}
+          alt={title}
+          className="w-full max-w-[300px] md:h-[130px] hover:scale-[1.05] transition-all duration-300 ease-in-out lg:h-[120px]  object-contain object-center"
+        />
+      </article>
+    </a>
   )
 }

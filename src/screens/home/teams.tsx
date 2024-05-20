@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
 
-import saurabh from 'assets/team1.JPG'
-import kanishk from 'assets/kanishk.JPG'
-import anni from 'assets/team2.JPG'
+import saurabh from 'assets/saurabh.png'
+import kanishk from 'assets/kanishk.png'
+import anni from 'assets/anni.png'
 import { Dialog, Transition } from '@headlessui/react'
 
 const leadership = [
@@ -55,7 +55,7 @@ export default function TeamAndVision() {
         <Tab active={active === 1} callback={() => setActive(1)} text="Team" />
       </div>
 
-      <div className="blade-bottom-padding-lg">
+      <div className="blade-bottom-padding-sm">
         {active === 1 ? <Teams /> : <Leadership />}
       </div>
     </>
@@ -389,7 +389,7 @@ function Teams() {
                         </div>
                       </div>
 
-                      <div className="pt-5 md:pt-7 xl:pt-7 2xl:pt-8">
+                      <div className="pt-5 md:pt-7 xl:pt-7 2xl:pt-8 flex-1 ">
                         <a
                           target="_blank"
                           href={teams[modal].profileURL}
@@ -409,60 +409,6 @@ function Teams() {
                             />
                           </svg>
                         </a>
-                      </div>
-
-                      <div className=" flex-1 ml-auto  md:max-w-[220px] flex items-end justify-end pb-4 pr-1">
-                        <div className="flex-0 pb-0 flex items-end gap-3 md:gap-4 lg:gap-5">
-                          <button
-                            onClick={() => setModal(0)}
-                            type="button"
-                            className="outline-none  focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
-                          >
-                            <span className="sr-only">
-                              click to move to prev slide
-                            </span>
-
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth={1.5}
-                              stroke="inherit"
-                              className="w-4 md:w-5 lg:w-6 h-4 md:h-4  lg:h-6"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                              />
-                            </svg>
-                          </button>
-
-                          <button
-                            onClick={() => setModal(1)}
-                            type="button"
-                            className="outline-none   focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
-                          >
-                            <span className="sr-only">
-                              click to move to next slide
-                            </span>
-
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth={1.5}
-                              stroke="inherit"
-                              className="w-4 md:w-5 lg:w-6 h-4 md:h-4  lg:h-6 rotate-180"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                              />
-                            </svg>
-                          </button>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -504,7 +450,7 @@ function Card({
       <div
         onClick={() => callback(index)}
         className=" cursor-pointer h-[360px]  md:h-[400px] xl:h-[450px] 2xl:h-[540px] w-full hover:border-opacity-100 transition-all 
-      duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-blueGreen border-opacity-0  
+      duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  
       rounded-xl  md:rounded-[24px] lg:rounded-[30px] xl:rounded-[40px] overflow-hidden"
       >
         <img

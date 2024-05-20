@@ -130,7 +130,7 @@ export default function Footer() {
 function TextAnchor({
   title,
   href,
-  isNew = true,
+  isNew = false,
   disabled = false,
 }: {
   isNew?: boolean

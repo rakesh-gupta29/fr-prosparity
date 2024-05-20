@@ -92,9 +92,10 @@ export default function SubstainableTransformation() {
           </div>
         </div>
       </div>
-      <div className=" blade-bottom-padding-xl">
-        <div className="w-11/12 xl:w-11/12 2xl:w-10/12 pl-3 blade-top-margin-sm 2xl:mb-8 mb-6 block ml-auto sm:mr-0 mr-auto"></div>
-        <div className="md:w-11/12 xl:w-11/12 2xl:w-10/12 values-carousel ml-auto pl-3 ">
+      <div className=" blade-bottom-padding-xl ">
+        <div className="w-11/12 xl:w-11/12 2xl:w-10/12   pl-3 blade-top-margin-sm 2xl:mb-8 mb-6 block ml-auto sm:mr-0 mr-auto"></div>
+        <div className="md:w-11/12 xl:w-11/12 2xl:w-10/12 values-carousel ml-auto ">
+          {/* <div className="absolute inset-0 z-50 touch-none pointer-events-none carousel-grad md:left-10 lg:left-14 xl:left-16  "></div> */}
           <Swiper
             ref={swiperImageRef}
             modules={[Navigation, Pagination]}

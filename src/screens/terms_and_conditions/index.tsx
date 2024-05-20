@@ -85,8 +85,13 @@ export default function PrivacyPolicy() {
       </section>
       <div className="markdown-wrapper grid lg:grid-cols-8 grid-cols-1 md:w-11/12 sm:px-5  px-3 w-container blade-top-padding-lg blade-bottom-padding-lg blade-bottom-margin-lg">
         <div className="col-span-2">
+          <div className="md:hidden block pb-5 ">
+            <span className="text-xl  md:text-2xl font-medium">
+              Table of contents
+            </span>
+          </div>
           <div className=" pb-5  grid grid-cols-2 md:flex flex-col gap-3 sticky top-32">
-            <span className="text-xl md:text-2xl font-medium">
+            <span className="text-xl md:block hidden md:text-2xl font-medium">
               Table of contents
             </span>
 

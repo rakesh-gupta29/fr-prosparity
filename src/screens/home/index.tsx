@@ -17,15 +17,10 @@ import HeroUpdated from './heroUpdated'
 export default function PageHome() {
   return (
     <>
-      {/* <Hero /> */}
       <HeroUpdated />
       <Products />
-      {/* <WhatWeDo /> */}
       <WhatsetsUsApart />
       <SustainableMobility />
-      {/* <Features /> */}
-      {/* <Problems /> */}
-      {/* <Offerings /> */}
       <Teams />
       <Investors />
       <ContactUs />

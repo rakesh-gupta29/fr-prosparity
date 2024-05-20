@@ -71,6 +71,7 @@ export default function Header() {
           </a>
 
           <div className=" flex-1 items-center justify-center gap-x-7  md:flex hidden">
+            <TextAnchor href="#teams" title="About us" />
             <TextAnchor href="#products" title="Products" />
             <TextAnchor href="#why-us" title="Why us" />
             <TextAnchor href="#investors" title="Investors" />

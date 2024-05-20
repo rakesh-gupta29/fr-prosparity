@@ -1,10 +1,11 @@
 import React, { Fragment, useEffect, useState } from 'react'
 
 import saurabh from 'assets/team1.JPG'
+import kanishk from 'assets/kanishk.JPG'
 import anni from 'assets/team2.JPG'
 import { Dialog, Transition } from '@headlessui/react'
 
-const members = [
+const leadership = [
   {
     name: 'Saurabh Khodke',
     designation: 'Co-Founder and CEO',
@@ -22,6 +23,17 @@ const members = [
   },
 ]
 
+const teams = [
+  {
+    name: 'Kanishk Agarwal',
+    designation: 'Founding Team Member',
+    coverImage: kanishk,
+    desc: 'Kanishk brings over 5 years of extensive experience in the financial services and consulting industry, having contributed significantly at TresVista Analytics, Stashfin, and Alstonia Impact. Throughout his career, he has worked closely with founders on key topics such as Investor Relations, Fund Raising, and M&A opportunities. As the first employee and a founding member of ProsParity, Kanishk is playing a pivotal role in driving the company’s 0 to 1 journey, focusing on product development, strategic planning, fundraising, and operational execution.',
+    profileURL:
+      'https://www.linkedin.com/in/kanishk-agarwal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+  },
+]
+
 export default function TeamAndVision() {
   const [active, setActive] = useState(0)
   const changeTab = (update: number) => setActive(update)
@@ -34,9 +46,18 @@ export default function TeamAndVision() {
           </span>
         </div>
       </div>
+      <div className="flex justify-center px-5 pt-3 md:pt-6 xl:pt-10 blade-bottom-padding-sm gap-4 md:gap-6 lg:gap-10">
+        <Tab
+          active={active === 0}
+          callback={() => setActive(0)}
+          text="Leadership"
+        />
+        <Tab active={active === 1} callback={() => setActive(1)} text="Team" />
+      </div>
 
-      {/* {active === 0 ? <Teams /> : <Mission />} */}
-      <Teams />
+      <div className="blade-bottom-padding-lg">
+        {active === 1 ? <Teams /> : <Leadership />}
+      </div>
     </>
   )
 }
@@ -62,7 +83,8 @@ function Tab({
     </button>
   )
 }
-function Teams() {
+
+function Leadership() {
   const [modal, setModal] = useState(-1)
   const invokeModal = (index: number) => {
     setModal(index)
@@ -117,8 +139,8 @@ function Teams() {
                   <div className="flex lg:flex-row flex-col   gap-y-2 md:gap-x-12  lg:gap-x-16 xl:gap-x-20 2xl:gap-x-24 overflow-auto  md:max-h-none p-3 md:p-4 lg:p-6 w-full ">
                     <div className="rounded-xl md:rounded-xl max-w-[550px] h-[300px] md:h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[550px] xl:rounded-3xl overflow-hidden">
                       <img
-                        src={members[modal].coverImage}
-                        alt={members[modal].name}
+                        src={leadership[modal].coverImage}
+                        alt={leadership[modal].name}
                         className="h-full w-full object-cover object-right-top"
                       />
                     </div>
@@ -127,10 +149,10 @@ function Teams() {
                         <div className="flex justify-between items-center  gap-x-6">
                           <div className="flex-1  pt-3 md:pt-4 lg:pt-6 flex flex-col justify-center">
                             <span className="member-name bg-clip-text text-transparent text-2xl md:text-3xl xl:text-4xl font-medium ">
-                              {members[modal].name}
+                              {leadership[modal].name}
                             </span>
                             <span className="text-sm md:text-base xl:text-lg 2xl:text-xl font-normal text-black font-medium">
-                              {members[modal].designation}
+                              {leadership[modal].designation}
                             </span>
                           </div>
                           <button
@@ -160,7 +182,7 @@ function Teams() {
                         </div>
                         <div className="max-w-lg pt-3  md:pt-6 ">
                           <span className="text-sm md:text-base lg:text-lg xl:text-base font-regular leading-normal block">
-                            {members[modal].desc}
+                            {leadership[modal].desc}
                           </span>
                         </div>
                       </div>
@@ -168,7 +190,7 @@ function Teams() {
                       <div className="pt-5 md:pt-7 xl:pt-7 2xl:pt-8">
                         <a
                           target="_blank"
-                          href={members[modal].profileURL}
+                          href={leadership[modal].profileURL}
                           className="bg-[#0B373C]  grid place-content-center rounded-md  lg:h-12 md:h-10 h-8 w-8 md:w-10 lg:w-12 xl:h-[54px] xl:w-[54px]"
                         >
                           <svg
@@ -250,7 +272,209 @@ function Teams() {
       )}
 
       <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding  mx-auto px-3 ">
-        {members.map((elem, index: number) => {
+        {leadership.map((elem, index: number) => {
+          return (
+            <Card
+              index={index}
+              callback={() => invokeModal(index)}
+              elem={elem}
+              key={`${index}`}
+            />
+          )
+        })}
+      </div>
+    </>
+  )
+}
+function Teams() {
+  const [modal, setModal] = useState(-1)
+  const invokeModal = (index: number) => {
+    setModal(index)
+  }
+  useEffect(() => {
+    if (modal !== -1) document.body.style.overflowY = 'hidden'
+    else document.body.style.overflowY = 'auto'
+  }, [modal])
+
+  return (
+    <>
+      {modal !== -1 && (
+        <Transition
+          show={modal !== -1}
+          enter="transition duration-100 ease-out"
+          enterFrom="transform scale-95 opacity-0"
+          enterTo="transform scale-100 opacity-100"
+          leave="transition duration-75 ease-out"
+          leaveFrom="transform scale-100 opacity-100"
+          leaveTo="transform scale-95 opacity-0"
+          as={Fragment}
+        >
+          <Dialog onClose={() => {}} className="relative z-50">
+            <div className="fixed inset-0 bg-blueGreen" aria-hidden="true" />
+
+            <div className="fixed inset-0 w-screen overflow-y-auto">
+              <div className="flex min-h-full items-center justify-center ">
+                <Dialog.Panel className=" max-w-[1380px] mx-auto modal-wrapper  md:rounded-[24px] lg:rounded-[30px] xl:rounded-[40px] w-full">
+                  <div className="md:hidden flex justify-end pr-3 md:pr-4 pb-4 pt-2 md:py-4 ">
+                    <button
+                      onClick={() => setModal(-1)}
+                      type="button"
+                      className="bg-black mt-1 stroke-white transition-all duration-300 ease-in-out grid place-content-center hover:bg-greenChip hover:stroke-black
+                             aspect-square  h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 rounded-full "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="inherit"
+                        className="lg:w-6 h-4 md:h-5 w-4 md:w-5 lg:h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18 18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="flex lg:flex-row flex-col   gap-y-2 md:gap-x-12  lg:gap-x-16 xl:gap-x-20 2xl:gap-x-24 overflow-auto  md:max-h-none p-3 md:p-4 lg:p-6 w-full ">
+                    <div className="rounded-xl md:rounded-xl max-w-[550px] h-[300px] md:h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[550px] xl:rounded-3xl overflow-hidden">
+                      <img
+                        src={teams[modal].coverImage}
+                        alt={teams[modal].name}
+                        className="h-full w-full object-cover object-top"
+                      />
+                    </div>
+                    <div className="flex  flex-1  pr-10   flex-col">
+                      <div className="flex-1">
+                        <div className="flex justify-between items-center  gap-x-6">
+                          <div className="flex-1  pt-3 md:pt-4 lg:pt-6 flex flex-col justify-center">
+                            <span className="member-name bg-clip-text text-transparent text-2xl md:text-3xl xl:text-4xl font-medium ">
+                              {teams[modal].name}
+                            </span>
+                            <span className="text-sm md:text-base xl:text-lg 2xl:text-xl font-normal text-black font-medium">
+                              {teams[modal].designation}
+                            </span>
+                          </div>
+                          <button
+                            onClick={() => setModal(-1)}
+                            type="button"
+                            className="bg-black mt-1 lg:grid  stroke-white transition-all duration-300 ease-in-out hidden place-content-center hover:bg-greenChip hover:stroke-black
+                             aspect-square h-10 w-10 xl:h-12 xl:w-12 rounded-full "
+                          >
+                            <span className="sr-only">
+                              click to move to next slide
+                            </span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={2}
+                              stroke="inherit"
+                              className="lg:w-6 h-5 md:h-5 w-5 md:w-5 lg:h-6"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 18 18 6M6 6l12 12"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <div className="max-w-lg pt-3  md:pt-6 ">
+                          <span className="text-sm md:text-base lg:text-lg xl:text-base font-regular leading-normal block">
+                            {teams[modal].desc}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="pt-5 md:pt-7 xl:pt-7 2xl:pt-8">
+                        <a
+                          target="_blank"
+                          href={teams[modal].profileURL}
+                          className="bg-[#0B373C]  grid place-content-center rounded-md  lg:h-12 md:h-10 h-8 w-8 md:w-10 lg:w-12 xl:h-[54px] xl:w-[54px]"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            className="h-5 md:h-6 lg:h-8 w-5 md:w-6 lg:w-8"
+                            viewBox="0 0 31 31"
+                            fill="none"
+                          >
+                            <path
+                              d="M26.8954 5.83004V25.2234C26.8954 25.6668 26.7194 26.0919 26.4057 26.4055C26.0922 26.7191 25.667 26.8952 25.2236 26.8952H5.83029C5.38689 26.8952 4.96164 26.7191 4.64811 26.4055C4.33458 26.0919 4.15845 25.6668 4.15845 25.2234V5.83004C4.15845 5.38664 4.33458 4.9614 4.64811 4.64787C4.96164 4.33434 5.38689 4.1582 5.83029 4.1582H25.2236C25.667 4.1582 26.0922 4.33434 26.4057 4.64787C26.7194 4.9614 26.8954 5.38664 26.8954 5.83004ZM10.8458 12.8518H7.50212V23.5515H10.8458V12.8518ZM11.1467 9.17372C11.1485 8.92079 11.1004 8.67001 11.0052 8.43566C10.9101 8.20132 10.7697 7.98801 10.5921 7.80793C10.4145 7.62784 10.2032 7.4845 9.97016 7.3861C9.73717 7.28768 9.48706 7.23613 9.23415 7.23438H9.17396C8.65961 7.23438 8.16635 7.43871 7.80264 7.8024C7.43895 8.1661 7.23462 8.65937 7.23462 9.17372C7.23462 9.68805 7.43895 10.1813 7.80264 10.545C8.16635 10.9087 8.65961 11.113 9.17396 11.113C9.4269 11.1193 9.67858 11.0756 9.91464 10.9845C10.1507 10.8934 10.3665 10.7567 10.5497 10.5822C10.7329 10.4077 10.8799 10.1988 10.9824 9.96747C11.0848 9.73612 11.1407 9.48684 11.1467 9.23391V9.17372ZM23.5517 17.0515C23.5517 13.8348 21.5054 12.5843 19.4724 12.5843C18.8069 12.5509 18.1441 12.6927 17.5504 12.9954C16.9566 13.2982 16.4526 13.7513 16.0887 14.3096H15.9951V12.8518H12.852V23.5515H16.1957V17.8605C16.1473 17.2777 16.3309 16.6993 16.7066 16.2511C17.0823 15.8028 17.6196 15.5209 18.2018 15.4666H18.3289C19.3922 15.4666 20.1813 16.1353 20.1813 17.8205V23.5515H23.5251L23.5517 17.0515Z"
+                              fill="#E3FFCC"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <div className=" flex-1 ml-auto  md:max-w-[220px] flex items-end justify-end pb-4 pr-1">
+                        <div className="flex-0 pb-0 flex items-end gap-3 md:gap-4 lg:gap-5">
+                          <button
+                            onClick={() => setModal(0)}
+                            type="button"
+                            className="outline-none  focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
+                          >
+                            <span className="sr-only">
+                              click to move to prev slide
+                            </span>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={1.5}
+                              stroke="inherit"
+                              className="w-4 md:w-5 lg:w-6 h-4 md:h-4  lg:h-6"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                              />
+                            </svg>
+                          </button>
+
+                          <button
+                            onClick={() => setModal(1)}
+                            type="button"
+                            className="outline-none   focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
+                          >
+                            <span className="sr-only">
+                              click to move to next slide
+                            </span>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={1.5}
+                              stroke="inherit"
+                              className="w-4 md:w-5 lg:w-6 h-4 md:h-4  lg:h-6 rotate-180"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Dialog.Panel>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      )}
+
+      <div className="flex justify-center max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding  mx-auto px-3 ">
+        {teams.map((elem, index: number) => {
           return (
             <Card
               index={index}
@@ -270,7 +494,7 @@ function Card({
   callback,
   index,
 }: {
-  elem: (typeof members)[0]
+  elem: (typeof leadership)[0]
   callback: (index: number) => void
   index: number
 }) {
@@ -280,7 +504,7 @@ function Card({
       <div
         onClick={() => callback(index)}
         className=" cursor-pointer h-[360px]  md:h-[400px] xl:h-[450px] 2xl:h-[540px] w-full hover:border-opacity-100 transition-all 
-      duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-gray border-opacity-0  
+      duration-300 ease-in-out hover:scale-[0.99] scale-100 border-2 border-solid border-blueGreen border-opacity-0  
       rounded-xl  md:rounded-[24px] lg:rounded-[30px] xl:rounded-[40px] overflow-hidden"
       >
         <img

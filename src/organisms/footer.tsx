@@ -71,8 +71,9 @@ export default function Footer() {
 
           <div className=" flex md:flex-row flex-col-reverse md:items-center justify-end  gap-6 md:gap-8 xl:gap-10 pt-2 ">
             <div className="flex  md:flex-row flex-col-reverse  gap-3  md:gap-5 xl:gap-8 md:items-center h-full 2xl:gap-10 ">
-              <TextAnchor href="/privacy-policy" title="Privacy Policy" />
+              <TextAnchor isNew href="/privacy-policy" title="Privacy Policy" />
               <TextAnchor
+                isNew
                 href="/terms-and-conditions"
                 title="Terms & Conditions"
               />
@@ -129,12 +130,27 @@ export default function Footer() {
 function TextAnchor({
   title,
   href,
+  isNew = true,
   disabled = false,
 }: {
+  isNew?: boolean
   disabled?: boolean
   title: string
   href: string
 }) {
+  if (isNew) {
+    return (
+      <a
+        target="_blank"
+        href={href}
+        className={` text-[#E3FFCC] text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font ${
+          disabled ? 'opacity-70  pointer-events-none touch-none' : ''
+        }`}
+      >
+        {title}
+      </a>
+    )
+  }
   return (
     <a
       href={href}

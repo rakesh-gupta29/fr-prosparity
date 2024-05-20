@@ -21,14 +21,13 @@ export default function HeroUpdated() {
           </span>
 
           <div className="grid place-content-start pt-7 md:pt-8 lg:pt-9">
-            <button
-              type="button"
-              onClick={() => {}}
+            <a
+              href="#contact"
               className="rounded-full  py-2 2xl:py-3  px-5 md:px-6 2xl:px-7  bg-transparent  border-1 border-solid border-[#3BFE7B] text-[#3BFE7B] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
                 text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-semibold  tracking-wide "
             >
               Contact us
-            </button>
+            </a>
           </div>
         </div>
         <div className="basis-56 grow shrink ">

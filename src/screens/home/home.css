@@ -322,3 +322,13 @@ footer {
 .content-wrapper .no-bullets {
   @apply list-none pl-10 space-y-2 font-normal font-regular leading-relaxed pb-6 md:pb-8 text-sm md:text-lg;
 }
+/* 
+.carousel-grad {
+  background-image: linear-gradient(
+    to right,
+    #061c23,
+    #061c23 0,
+    transparent 5%,
+    transparent 100%
+  );
+} */

@@ -60,7 +60,7 @@ export default function Header() {
       >
         <nav className=" w-container-lg 2xl:w-container flex justify-between gap-x-10 items-center">
           <a
-            className="grid lg:basis-80 place-content-start grow-0 shrink  "
+            className="grid  lg:basis-60 xl:basis-72 place-content-start grow-0 shrink  "
             href="/#hero"
           >
             <img
@@ -77,7 +77,7 @@ export default function Header() {
             <TextAnchor href="#investors" title="Our Investors" />
           </div>
 
-          <div className="lg:basis-80 lg:flex hidden grow-0 shrink justify-end">
+          <div className=" lg:basis-48 xl:basis-72 lg:flex hidden grow-0 shrink justify-end">
             <a
               href="#contact"
               onClick={handleClick}
@@ -92,7 +92,7 @@ export default function Header() {
             type="button"
             className={`  ${
               isNavFixed ? 'fill-white' : 'fill-white'
-            }  xl:hidden block`}
+            }  lg:hidden block`}
             onClick={toggleState}
           >
             <span className="sr-only">

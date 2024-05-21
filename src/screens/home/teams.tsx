@@ -18,7 +18,7 @@ const leadership = [
     name: 'Anirudh Dhakar',
     designation: 'Co-Founder and COO',
     coverImage: anni,
-    desc: 'Anirudh brings over a decade of experience to the table, having worked with SBI, Northern Arc Capital, and more. His expertise lies in crafting and scaling lending platforms, harmonizing multiple stakeholders seamlessly, and maintaining high standards in processes, credit quality, and compliance. Known for his successful collaborations with various fintech lending firms, Anirudh is leading ProsParity towards becoming a top-tier lending platform in asset financing. He excels in driving sales, credit, technology, and product strategies with finesse. Anirudh holds an MBA from IIFM-Bhopal.',
+    desc: 'Anirudh brings over a decade of experience to the table, having worked with SBI, Northern Arc Capital, and more. His expertise lies in crafting and scaling lending platforms harmonizing multiple stakeholders seamlessly, and maintaining high standards in processes, credit quality, and compliance. Known for his successful collaborations with various fintech lending firms, he excels in driving sales, credit, technology, and product strategies with finesse. Anirudh is focused on leading ProsParity towards becoming a top-tier lending platform in asset financing. Anirudh holds an MBA from IIFM-Bhopal.',
     profileURL: 'https://www.linkedin.com/in/anirudh-dhakar-78979a4b/',
   },
 ]
@@ -26,9 +26,9 @@ const leadership = [
 const teams = [
   {
     name: 'Kanishk Agarwal',
-    designation: 'Founding Team Member',
+    designation: 'Founding Member',
     coverImage: kanishk,
-    desc: 'Kanishk brings over 5 years of extensive experience in the financial services and consulting industry, having contributed significantly at TresVista Analytics, Stashfin, and Alstonia Impact. Throughout his career, he has worked closely with founders on key topics such as Investor Relations, Fund Raising, and M&A opportunities. As the first employee and a founding member of ProsParity, Kanishk is playing a pivotal role in driving the company’s 0 to 1 journey, focusing on product development, strategic planning, fundraising, and operational execution.',
+    desc: 'Kanishk brings over 5 years of extensive experience in the financial services and consulting industry, having contributed significantly at TresVista Analytics, Stashfin, and Alstonia Impact. Throughout his career, he has worked closely with founders on key topics such as Investor Relations, Fund Raising, and M&A opportunities. As the first employee and a founding member of ProsParity, Kanishk plays a pivotal role in driving the company’s 0 to 1 journey, focusing on product development, strategic planning, fundraising, and operational execution.',
     profileURL:
       'https://www.linkedin.com/in/kanishk-agarwal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },
@@ -50,7 +50,7 @@ export default function TeamAndVision() {
         <Tab
           active={active === 0}
           callback={() => setActive(0)}
-          text="Leadership"
+          text="Founders"
         />
         <Tab active={active === 1} callback={() => setActive(1)} text="Team" />
       </div>

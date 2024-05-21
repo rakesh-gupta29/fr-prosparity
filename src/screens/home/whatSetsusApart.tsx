@@ -204,14 +204,10 @@ export default function SubstainableTransformation() {
         </div>
       </div>
       <div className=" blade-bottom-padding-xl blade-top-padding  lg:block hidden ">
-        <div className="min-h-full self-stretch grid grid-cols-2  gap-x-10 gap-y-20 max-w-screen-xl w-full mx-auto ">
+        <div className="min-h-full  self-stretch grid grid-cols-2  gap-x-10 gap-y-20 max-w-[1180px] w-full mx-auto ">
           {values.map((elem: IValue, index) => {
             const key = `${index}`
-            return (
-              <SwiperSlide key={key} className="min-h-full h-full self-stretch">
-                <ValueCard value={elem} larger />
-              </SwiperSlide>
-            )
+            return <ValueCard value={elem} larger />
           })}
         </div>
       </div>
@@ -228,7 +224,7 @@ function ValueCard({
 }) {
   const { title, desc, cover } = value
   return (
-    <article className=" value-card ">
+    <article className=" value-card  mx-auto  ">
       <div className="mr-auto  grid place-content-start">
         <img
           src={cover}

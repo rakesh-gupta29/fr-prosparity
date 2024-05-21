@@ -50,8 +50,8 @@ export default function Products() {
             </span>
             <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-normal leading-snug">
               Avail loans for reliable and convenient{' '}
-              <br className="md:block hidden" /> electric scooters for urban and{' '}
-              <br className="md:block hidden" /> rural commuting
+              <br className="md:block hidden" /> electric two wheelers for urban
+              and <br className="md:block hidden" /> rural commuting
             </span>
             {/* <div className="grid place-content-start  pt-3 md:pt-6 lg:pt-7 ">
               <button

@@ -42,7 +42,7 @@ export default function TeamAndVision() {
       <div id="teams">
         <div className="grid px-3 text-center teams-wrapper  place-content-center blade-top-padding-lg">
           <span className="text-3xl md:text-4xl 2xl:text-5xl title  font-medium text-transparent bg-clip-text ">
-            About us
+            About Us
           </span>
         </div>
       </div>

@@ -92,7 +92,7 @@ export default function SubstainableTransformation() {
           </div>
         </div>
       </div>
-      <div className=" blade-bottom-padding-xl ">
+      <div className=" blade-bottom-padding-xl d  lg:hidden block ">
         <div className="w-11/12 xl:w-11/12 2xl:w-10/12   pl-3 blade-top-margin-sm 2xl:mb-8 mb-6 block ml-auto sm:mr-0 mr-auto"></div>
         <div className="md:w-11/12 xl:w-11/12 2xl:w-10/12 values-carousel ml-auto ">
           {/* <div className="absolute inset-0 z-50 touch-none pointer-events-none carousel-grad md:left-10 lg:left-14 xl:left-16  "></div> */}
@@ -203,11 +203,29 @@ export default function SubstainableTransformation() {
           </div>
         </div>
       </div>
+      <div className=" blade-bottom-padding-xl blade-top-padding  lg:block hidden ">
+        <div className="min-h-full self-stretch grid grid-cols-2  gap-x-10 gap-y-20 max-w-screen-xl w-full mx-auto ">
+          {values.map((elem: IValue, index) => {
+            const key = `${index}`
+            return (
+              <SwiperSlide key={key} className="min-h-full h-full self-stretch">
+                <ValueCard value={elem} larger />
+              </SwiperSlide>
+            )
+          })}
+        </div>
+      </div>
     </section>
   )
 }
 
-function ValueCard({ value }: { value: IValue }) {
+function ValueCard({
+  value,
+  larger = false,
+}: {
+  larger?: boolean
+  value: IValue
+}) {
   const { title, desc, cover } = value
   return (
     <article className=" value-card ">
@@ -218,11 +236,15 @@ function ValueCard({ value }: { value: IValue }) {
           className="xl:h-[330px] 2xl:h-[380px] h-[250px] lg:h-[290px] md:h-[280px] w-full object-contain object-center"
         />
       </div>
-      <div className="pt-1 sm:pt-4 md:pt-5 lg:pt-6 xl:pt-7 grid gap-1 md:gap-2">
+      <div className="pt-1 sm:pt-4 md:pt-5 lg:pt-6 xl:pt-4 grid gap-1 md:gap-2">
         <span className="text-2xl lg:text-3xl font-medium  title ">
           {title}{' '}
         </span>
-        <span className="text-sm md:text-base text-white lg:text-lg xl:text-xl text-opacity-80 font-regular font-normal leading-tight block w-11/12">
+        <span
+          className={` ${
+            larger ? ' max-w-md' : ''
+          } text-sm md:text-base text-white lg:text-lg xl:text-xl text-opacity-80 font-regular font-normal leading-tight block w-11/12 `}
+        >
           {desc}{' '}
         </span>
       </div>

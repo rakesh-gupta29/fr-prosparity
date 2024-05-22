@@ -51,7 +51,7 @@ export default function Products() {
             <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-normal leading-snug">
               Avail loans for reliable <br className="md:block hidden" /> and
               convenient electric <br className="md:block hidden" /> two
-              wheelers for urban and <br className="md:block hidden" /> rural
+              wheelers for urban <br className="md:block hidden" /> and rural
               commuting
             </span>
             {/* <div className="grid place-content-start  pt-3 md:pt-6 lg:pt-7 ">

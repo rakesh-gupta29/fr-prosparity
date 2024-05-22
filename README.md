@@ -44,3 +44,8 @@ You can view the development server at `localhost:3000`.
 ## [](https://github.com/rakesh-gupta29/boilerplates/tree/main/react-ts#license)License
 
 MIT
+
+EmailJS creds:
+we use emailjs to send emails of form submissions:
+username: websiteprosparity@gmail.com
+password: websiteprosparity@123

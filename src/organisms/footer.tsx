@@ -16,15 +16,15 @@ export default function Footer() {
               />
             </div>
 
-            <div className="md:hidden block flex-0 mt-px mr-1 ">
+            <div className="md:hidden block  flex-0 mt-px mr-1 ">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/thrive-trail-private-limited/"
               >
                 <svg
-                  width="32"
-                  height="32"
+                  width="40"
+                  height="40"
                   viewBox="0 0 43 43"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -71,8 +71,14 @@ export default function Footer() {
 
           <div className=" flex md:flex-row flex-col-reverse md:items-center justify-end  gap-6 md:gap-8 xl:gap-10 pt-2 ">
             <div className="flex  md:flex-row flex-col-reverse  gap-3  md:gap-5 xl:gap-8 md:items-center h-full 2xl:gap-10 ">
-              <TextAnchor isNew href="/privacy-policy" title="Privacy Policy" />
               <TextAnchor
+                isNew
+                href="/privacy-policy"
+                title="Privacy Policy"
+                reduceOpacity
+              />
+              <TextAnchor
+                reduceOpacity
                 isNew
                 href="/terms-and-conditions"
                 title="Terms & Conditions"
@@ -128,12 +134,14 @@ export default function Footer() {
 }
 
 function TextAnchor({
+  reduceOpacity = false,
   title,
   href,
   isNew = false,
   disabled = false,
 }: {
   isNew?: boolean
+  reduceOpacity?: boolean
   disabled?: boolean
   title: string
   href: string
@@ -145,7 +153,7 @@ function TextAnchor({
         href={href}
         className={` text-[#E3FFCC] text-sm font-medium uppercase tracking-wide hover:underline underline-offset-2 decoration-from-font ${
           disabled ? 'opacity-70  pointer-events-none touch-none' : ''
-        }`}
+        } ${reduceOpacity ? 'text-opacity-70' : ''}`}
       >
         {title}
       </a>

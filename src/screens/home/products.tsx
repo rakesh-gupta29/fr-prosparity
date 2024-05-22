@@ -32,7 +32,8 @@ export default function Products() {
               <button
                 type="button"
                 onClick={handleClick}
-                className="rounded-full py-1 md:py-2 lg:py-3  px-4 md:px-6 lg:px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
+                className="rounded-full py-1 md:py-2 lg:py-3 
+                 px-4 md:px-6 lg:px-7  bg-white border-1 border-solid border-[#0B373C] text-[#0B373C] hover:bg-[#0B373C] hover:text-[#E3FFCC] transition-all duration-300 ease-in-out
                 text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-semibold  tracking-wide "
               >
                 Contact us
@@ -48,7 +49,7 @@ export default function Products() {
             <span className="text-2xl lg:text-3xl font-medium text-black leading-tight">
               Electric 2 Wheeler
             </span>
-            <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl font-regular font-normal leading-snug">
+            <span className=" text-sm md:text-base lg:text-lg 2xl:text-xl font-regular  max-w-[250px] md:max-w-none font-normal leading-snug">
               Avail loans for reliable <br className="md:block hidden" /> and
               convenient electric <br className="md:block hidden" /> two
               wheelers for urban <br className="md:block hidden" /> and rural

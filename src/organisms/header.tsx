@@ -46,8 +46,6 @@ export default function Header() {
     })
   }, [])
 
-  const handleClick = () => {}
-
   const [isOpen, toggleState] = useReducer((s) => !s, false)
 
   return (
@@ -80,8 +78,7 @@ export default function Header() {
           <div className=" lg:basis-48 xl:basis-72 lg:flex hidden grow-0 shrink justify-end">
             <a
               href="#contact"
-              onClick={handleClick}
-              className="rounded-full  py-2 2xl:py-3  px-5 2xl:px-7  bg-[#0B373C] border-1 border-solid border-[#0B373C]  hover:bg-[#0B373C] hover:text-[#E3FFCC]  text-[#E3FFCC] transition-all duration-300 ease-in-out
+              className="rounded-full  hover:bg-darkGreen py-2 2xl:py-3  px-5 2xl:px-7  bg-[#0B373C] border-1 border-solid border-[#0B373C]   hover:text-[#E3FFCC]  text-[#E3FFCC] transition-all duration-300 ease-in-out
                text-base md:text-lg 2xl:text-xl font-regular font-semibold  tracking-wide "
             >
               Contact us

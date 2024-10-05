@@ -27,6 +27,20 @@ const leadership = [
     profileURL: 'https://www.linkedin.com/in/anirudh-dhakar-78979a4b/',
   },
   {
+    name: 'Hakam Dhakar',
+    designation: 'Founding Member & Business Head',
+    coverImage: hakam,
+    desc: 'Hakam brings over 23 years of experience in sales, credit, and managerial roles across various financial institutions such as Mahindra, Sonalika, L&T Finance and Sundaram Finance. He was instrumental in setting up the Tractor & Agri-equipment financing vertical for Sundaram Finance in Chhattisgarh. At ProsParity, Hakam heads the 3-wheeler segment, managing the field team end-to-end from sourcing and underwriting to collections.',
+    profileURL: 'https://www.linkedin.com/in/hakam-singh-dhakar-935bb9317/',
+  },
+  {
+    name: 'Jitendra Sharma ',
+    designation: 'Founding Member & Business Head ',
+    coverImage: jitedra,
+    desc: 'Jitendra brings over 18 years of experience from the credit & lending space where he oversaw sales and collections of various assets such as tractors, cars, SUVs, and LCVs during his time at firms such as Sundaram Finance, HDFC and Kotak Mahindra. He was instrumental in growing Sundaram Finance’s footprint in the commercial vehicle financing space in Madhya Pradesh from its early days. At ProsParity, Jitendra heads the 2-wheeler segment, managing the field team end-to-end from sourcing and underwriting to collections.',
+    profileURL: 'https://www.linkedin.com/in/jitendra-sharma-256008318/',
+  },
+  {
     name: 'Kanishk Agarwal',
     designation: 'Founding Member',
     coverImage: kanishk,
@@ -34,37 +48,23 @@ const leadership = [
     profileURL:
       'https://www.linkedin.com/in/kanishk-agarwal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },
-  {
-    name: 'Jitendra Sharma ',
-    designation: 'Founding Team Member & Business Head ',
-    coverImage: jitedra,
-    desc: 'Jitendra brings over 18 years of experience from the credit &amp; lending space where he oversaw sales and collections of various assets such as tractors, cars, SUVs, and LCVs during his time at firms such as Sundaram Finance, HDFC and Kotak Mahindra. He was instrumental in growing Sundaram Finance’s footprint in the commercial vehicle financing space in Madhya Pradesh from its early days. At ProsParity, Jitendra heads the 2-wheeler segment, managing the field team end-to- end from sourcing and underwriting to collections.',
-    profileURL: 'https://www.linkedin.com/in/jitendra-sharma-256008318/',
-  },
-  {
-    name: 'Hakam Dhakar',
-    designation: 'Founding Team Member & Business Head',
-    coverImage: hakam,
-    desc: 'Hakam brings over 23 years of experience in sales, credit, and managerial roles across various financial institutions such as Mahindra, Sonalika, L&amp;T Finance and Sundaram Finance. He was instrumental in setting up the Tractor &amp; Agri-equipment financing vertical for Sundaram Finance in Chhattisgarh. At ProsParity, Hakam heads the 3-wheeler segment, managing the field team end-to-end from sourcing and underwriting to collections.',
-    profileURL: 'https://www.linkedin.com/in/hakam-singh-dhakar-935bb9317/',
-  },
 ]
 
 const teams = [
   {
-    name: 'Russell Fernandez',
-    designation: "Founder's Office",
-    coverImage: russel,
-    desc: 'Russell brings over 3 years of experience from the financial services industry. As part of the offshore extension to the London office of a European Investment Bank, he worked across various M&amp;A transactions within the financial technology and services space, with an EV range of €100mn to €5bn. At ProsParity, Russell plays a key role in various areas such as product development, strategy, investor relations, IT, and HR amongst others.',
-    profileURL: 'https://www.linkedin.com/in/russellfer/',
+    name: 'Sunil Dubey',
+    designation: 'State Head',
+    coverImage: sunil,
+    desc: 'Sunil brings over 20 years of experience in sales, business development, and managerial roles across various financial institutions such as Mahindra, Sundaram Finance, Chola and Hinduja Leyland Finance. Over the course of his career, he worked on various initiatives such as team building & management, business development, collections & recovery, etc. At ProsParity, Sunil is an area head and looks at business development.',
+    profileURL: 'https://www.linkedin.com/in/sunil-dubey-aa121931a/',
   },
 
   {
-    name: 'Sunil Dubey',
-    designation: 'Area Head',
-    coverImage: sunil,
-    desc: 'Sunil brings over 20 years of experience in sales, business development, and managerial roles across various financial institutions such as Mahindra, Sundaram Finance, Chola and Hinduja Leyland Finance. Over the course of his career, he worked on various initiatives such as team building &amp; management, business development, collections &amp; recovery, etc. At ProsParity, Sunil is an area head and looks at business development.',
-    profileURL: 'https://www.linkedin.com/in/sunil-dubey-aa121931a/',
+    name: 'Russell Fernandez',
+    designation: "Founder's Office",
+    coverImage: russel,
+    desc: 'Russell brings over 3 years of experience from the financial services industry. As part of the offshore extension to the London office of a European Investment Bank, he worked across various M&A transactions within the financial technology and services space, with an EV range of €100mn to €5bn. At ProsParity, Russell plays a key role in various areas such as product development, strategy, investor relations, IT, and HR amongst others.',
+    profileURL: 'https://www.linkedin.com/in/russellfer/',
   },
 ]
 
@@ -111,7 +111,7 @@ function Tab({
       onClick={callback}
       className={` ${
         active ? 'tab-active' : ''
-      } px-6 md:px-8  text-base md:text-lg 2xl:text-xl  py-1.5 md:py-2 rounded-full font-medium`}
+      } px-6 md:px-8 uppercase  text-base md:text-lg 2xl:text-xl  py-1.5 md:py-2 rounded-full font-medium`}
     >
       {text}
     </button>
@@ -120,12 +120,6 @@ function Tab({
 
 function Leadership() {
   const [current, setCurrent] = useState(-1)
-
-  useEffect(() => {
-    if (current) {
-      console.log(current)
-    }
-  }, [current])
 
   const invokeModal = (index: number) => {
     setCurrent(index)
@@ -318,7 +312,7 @@ function Leadership() {
         </Transition>
       )}
 
-      <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding  mx-auto px-3 ">
+      <div className="grid grid-cols-1  md:grid-cols-3 max-w-screen-2xl w-11/12  gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-6 blade-top-padding  mx-auto px-3 ">
         {leadership.map((elem, index: number) => {
           return (
             <Card
@@ -335,20 +329,21 @@ function Leadership() {
 }
 
 function Teams() {
-  const [modal, setModal] = useState(-1)
+  const [current, setCurrent] = useState(-1)
+
   const invokeModal = (index: number) => {
-    setModal(index)
+    setCurrent(index)
   }
   useEffect(() => {
-    if (modal !== -1) document.body.style.overflowY = 'hidden'
+    if (current !== -1) document.body.style.overflowY = 'hidden'
     else document.body.style.overflowY = 'auto'
-  }, [modal])
+  }, [current])
 
   return (
     <>
-      {modal !== -1 && (
+      {current !== -1 && (
         <Transition
-          show={modal !== -1}
+          show={current !== -1}
           enter="transition duration-100 ease-out"
           enterFrom="transform scale-95 opacity-0"
           enterTo="transform scale-100 opacity-100"
@@ -362,10 +357,10 @@ function Teams() {
 
             <div className="fixed inset-0 w-screen overflow-y-auto">
               <div className="flex min-h-full items-center justify-center ">
-                <Dialog.Panel className=" max-w-[1380px] mx-auto modal-wrapper  w-11/12  md:rounded-[24px] lg:rounded-[30px] xl:rounded-[40px] wll">
+                <Dialog.Panel className="  max-w-[500px] lg:max-w-[1380px] mx-auto modal-wrapper  rounded-xl md:rounded-[24px] lg:rounded-[30px] xl:rounded-[40px] w-11/12">
                   <div className="md:hidden flex justify-end pr-3 md:pr-4 pb-4 pt-2 md:py-4 ">
                     <button
-                      onClick={() => setModal(-1)}
+                      onClick={() => setCurrent(-1)}
                       type="button"
                       className="bg-black mt-1 stroke-white transition-all duration-300 ease-in-out grid place-content-center hover:bg-greenChip hover:stroke-black
                              aspect-square  h-8 w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 rounded-full "
@@ -389,9 +384,9 @@ function Teams() {
                   <div className="flex lg:flex-row flex-col   gap-y-2 md:gap-x-12  lg:gap-x-16 xl:gap-x-20 2xl:gap-x-24 overflow-auto  md:max-h-none p-3 md:p-4 lg:p-6 w-full ">
                     <div className="rounded-xl md:rounded-xl max-w-[550px] h-[300px] md:h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[550px] xl:rounded-3xl overflow-hidden">
                       <img
-                        src={teams[modal].coverImage}
-                        alt={teams[modal].name}
-                        className="h-full w-full object-cover object-top"
+                        src={teams[current].coverImage}
+                        alt={teams[current].name}
+                        className="h-full w-full object-cover object-right-top"
                       />
                     </div>
                     <div className="flex  flex-1  pr-10   flex-col">
@@ -399,14 +394,14 @@ function Teams() {
                         <div className="flex justify-between items-center  gap-x-6">
                           <div className="flex-1  pt-3 md:pt-4 lg:pt-6 flex flex-col justify-center">
                             <span className="member-name bg-clip-text text-transparent text-2xl md:text-3xl xl:text-4xl font-medium ">
-                              {teams[modal].name}
+                              {teams[current].name}
                             </span>
                             <span className="text-sm md:text-base xl:text-lg 2xl:text-xl font-normal text-black font-medium">
-                              {teams[modal].designation}
+                              {teams[current].designation}
                             </span>
                           </div>
                           <button
-                            onClick={() => setModal(-1)}
+                            onClick={() => setCurrent(-1)}
                             type="button"
                             className="bg-black mt-1 lg:grid  stroke-white transition-all duration-300 ease-in-out hidden place-content-center hover:bg-greenChip hover:stroke-black
                              aspect-square h-10 w-10 xl:h-12 xl:w-12 rounded-full "
@@ -432,15 +427,15 @@ function Teams() {
                         </div>
                         <div className="max-w-lg pt-3  md:pt-6 ">
                           <span className="text-sm md:text-base lg:text-lg xl:text-base font-regular leading-normal block">
-                            {teams[modal].desc}
+                            {teams[current].desc}
                           </span>
                         </div>
                       </div>
 
-                      <div className="pt-5  md:pt-7 xl:pt-7 2xl:pt-8 flex-1 ">
+                      <div className="pt-5 md:pt-7 xl:pt-7 2xl:pt-8">
                         <a
                           target="_blank"
-                          href={teams[modal].profileURL}
+                          href={teams[current].profileURL}
                           className="bg-[#0B373C]  grid place-content-center rounded-md  lg:h-12 md:h-10 h-8 w-8 md:w-10 lg:w-12 xl:h-[54px] xl:w-[54px]"
                         >
                           <svg
@@ -458,6 +453,66 @@ function Teams() {
                           </svg>
                         </a>
                       </div>
+
+                      <div className=" flex-1 ml-auto  md:max-w-[220px] flex items-end justify-end pb-4 pr-1">
+                        <div className="flex-0 pb-0 flex items-end gap-3 md:gap-4 lg:gap-5">
+                          <button
+                            onClick={() => {
+                              setCurrent((prev) => Math.max(0, prev - 1))
+                            }}
+                            type="button"
+                            className="outline-none  focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
+                          >
+                            <span className="sr-only">
+                              click to move to prev slide
+                            </span>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={1.5}
+                              stroke="inherit"
+                              className="w-4 md:w-5 lg:w-6 h-4 md:h-4  lg:h-6"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                              />
+                            </svg>
+                          </button>
+
+                          <button
+                            onClick={() => {
+                              setCurrent((prev) =>
+                                Math.min(prev + 1, teams.length - 1),
+                              )
+                            }}
+                            type="button"
+                            className="outline-none   focus-visible:outline-none rounded-full bg-[#004345] border-white focus-visible:stroke-white focus-visible:bg-darkGreen hover:bg-darkGreen border-1 border-solid  hover:stroke-white stroke-white transition-all duration-300 ease-in-out cursor-pointer grid place-content-center place-items-center   h-10 w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16  disabled:hover:bg-[#004345] 2xl:w-[72px] 2xl:h-[72px] aspect-square disabled:opacity-60 disabled:cursor-not-allowed"
+                          >
+                            <span className="sr-only">
+                              click to move to next slide
+                            </span>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={1.5}
+                              stroke="inherit"
+                              className="w-4 md:w-5 lg:w-6 h-4 md:h-4  lg:h-6 rotate-180"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Dialog.Panel>
@@ -467,14 +522,12 @@ function Teams() {
         </Transition>
       )}
 
-      <div className="flex justify-center max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding  mx-auto px-3 ">
+      <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding  mx-auto px-3 ">
         {teams.map((elem, index: number) => {
           return (
             <Card
               index={index}
-              callback={() => {
-                invokeModal(index)
-              }}
+              callback={() => invokeModal(index)}
               elem={elem}
               key={`${index}`}
             />
@@ -496,7 +549,7 @@ function Card({
 }) {
   const { name, designation, coverImage } = elem
   return (
-    <article className="member-card  max-w-[538px]  hover:border-opacity-100 transition-all duration-300 ease-in-out   mx-auto ">
+    <article className="member-card   max-w-[538px]  hover:border-opacity-100 transition-all duration-300 ease-in-out   mx-auto ">
       <div
         onClick={() => callback(index)}
         className=" cursor-pointer h-[360px]  md:h-[400px] xl:h-[450px] 2xl:h-[540px] w-full hover:border-opacity-100 transition-all 

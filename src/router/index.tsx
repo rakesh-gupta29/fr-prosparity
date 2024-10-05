@@ -35,11 +35,6 @@ export default function routes() {
         },
 
         {
-          path: '/teams',
-          element: <PageAbout />,
-        },
-
-        {
           path: '/terms-and-conditions',
           element: <PageTermsAndConditions />,
         },

@@ -58,6 +58,7 @@ export default function Footer() {
             <TextAnchor href="#products" title="Our products" />
             <TextAnchor href="#why-us" title="Why us" />
             <TextAnchor href="#teams" title="About us" />
+
             <TextAnchor href="#investors" title="Our Investors" />
           </div>
         </div>

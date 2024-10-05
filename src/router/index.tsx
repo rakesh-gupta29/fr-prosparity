@@ -33,12 +33,9 @@ export default function routes() {
           path: '/',
           element: <PageHome />,
         },
+
         {
-          path: '/contact',
-          element: <PageContact />,
-        },
-        {
-          path: '/about',
+          path: '/teams',
           element: <PageAbout />,
         },
 

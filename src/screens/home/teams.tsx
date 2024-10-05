@@ -27,7 +27,7 @@ const leadership = [
     profileURL: 'https://www.linkedin.com/in/anirudh-dhakar-78979a4b/',
   },
   {
-    name: 'Hakam Dhakar',
+    name: 'Hakam Singh Dhakar',
     designation: 'Founding Member & Business Head',
     coverImage: hakam,
     desc: 'Hakam brings over 23 years of experience in sales, credit, and managerial roles across various financial institutions such as Mahindra, Sonalika, L&T Finance and Sundaram Finance. He was instrumental in setting up the Tractor & Agri-equipment financing vertical for Sundaram Finance in Chhattisgarh. At ProsParity, Hakam heads the 3-wheeler segment, managing the field team end-to-end from sourcing and underwriting to collections.',
@@ -72,14 +72,7 @@ export default function TeamAndVision() {
   const [active, setActive] = useState(0)
 
   return (
-    <>
-      <div id="teams">
-        <div className="grid px-3 text-center teams-wrapper  place-content-center blade-top-padding-lg">
-          <span className="text-3xl md:text-4xl 2xl:text-5xl title  font-medium text-transparent bg-clip-text ">
-            About Us
-          </span>
-        </div>
-      </div>
+    <div className="pt-8">
       <div className="flex justify-center px-5 pt-3 md:pt-6 xl:pt-10 blade-bottom-padding-sm gap-4 md:gap-6 lg:gap-10">
         <Tab
           active={active === 0}
@@ -92,7 +85,7 @@ export default function TeamAndVision() {
       <div className="blade-bottom-padding-sm">
         {active === 1 ? <Teams /> : <Leadership />}
       </div>
-    </>
+    </div>
   )
 }
 
@@ -111,7 +104,7 @@ function Tab({
       onClick={callback}
       className={` ${
         active ? 'tab-active' : ''
-      } px-6 md:px-8 uppercase  text-base md:text-lg 2xl:text-xl  py-1.5 md:py-2 rounded-full font-medium`}
+      } px-6 md:px-8   text-base md:text-lg 2xl:text-xl  py-1.5 md:py-2 rounded-full font-medium`}
     >
       {text}
     </button>
@@ -312,7 +305,7 @@ function Leadership() {
         </Transition>
       )}
 
-      <div className="grid grid-cols-1  md:grid-cols-3 max-w-screen-2xl w-11/12  gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-6 blade-top-padding  mx-auto px-3 ">
+      <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl w-11/12  gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-10 blade-top-padding  mx-auto px-3 ">
         {leadership.map((elem, index: number) => {
           return (
             <Card
@@ -522,7 +515,7 @@ function Teams() {
         </Transition>
       )}
 
-      <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-16 blade-top-padding  mx-auto px-3 ">
+      <div className="grid grid-cols-1  md:grid-cols-2 max-w-7xl gap-y-16 gap-x-8 md:gap-x-12 xl:gap-x-10 blade-top-padding  mx-auto px-3 ">
         {teams.map((elem, index: number) => {
           return (
             <Card

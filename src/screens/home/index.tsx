@@ -21,7 +21,7 @@ export default function PageHome() {
       <Products />
       <WhatsetsUsApart />
       <SustainableMobility />
-      <Teams />
+
       <Investors />
       <ContactUs />
     </>

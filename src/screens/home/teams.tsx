@@ -28,14 +28,14 @@ const leadership = [
   },
   {
     name: 'Hakam Singh Dhakar',
-    designation: 'Co-founder and Business Head',
+    designation: 'Co-Founder and Business Head',
     coverImage: hakam,
     desc: 'Hakam brings over 23 years of experience in sales, credit, and managerial roles across various financial institutions such as Mahindra, Sonalika, L&T Finance and Sundaram Finance. He was instrumental in setting up the Tractor & Agri-equipment financing vertical for Sundaram Finance in Chhattisgarh. At ProsParity, Hakam heads the 3-wheeler segment, managing the field team end-to-end from sourcing and underwriting to collections.',
     profileURL: 'https://www.linkedin.com/in/hakam-singh-dhakar-935bb9317/',
   },
   {
     name: 'Jitendra Sharma ',
-    designation: 'Co-founder and Business Head',
+    designation: 'Co-Founder and Business Head',
     coverImage: jitedra,
     desc: 'Jitendra brings over 18 years of experience from the credit & lending space where he oversaw sales and collections of various assets such as tractors, cars, SUVs, and LCVs during his time at firms such as Sundaram Finance, HDFC and Kotak Mahindra. He was instrumental in growing Sundaram Finance’s footprint in the commercial vehicle financing space in Madhya Pradesh from its early days. At ProsParity, Jitendra heads the 2-wheeler segment, managing the field team end-to-end from sourcing and underwriting to collections.',
     profileURL: 'https://www.linkedin.com/in/jitendra-sharma-256008318/',

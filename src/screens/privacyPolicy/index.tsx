@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
           <div className="col-span-8 md:pl-3    content-wrapper">
             <h4 id="overview">Overview</h4>
             <p>
-              At Thrive Trail Private Limited ("ProsParity" "we" or "us"), we
+              At Etribe Finance Private Limited ("ProsParity" "we" or "us"), we
               recognize the significance of privacy. We are committed to
               ensuring that your personal information is handled with care and
               transparency. This Privacy Policy ("Privacy Policy") is designed
@@ -177,7 +177,7 @@ export default function PrivacyPolicy() {
             <p>
               Any Information, which is the subject matter of this Privacy
               Policy, provided by you or otherwise collected by Us is collected
-              and retained by ProsParity (i.e., Thrive Trail Private Limited)
+              and retained by ProsParity (i.e., Etribe Finance Private Limited)
               that has the registered office at Flat No. 904, Keystone Solista,
               Plot No. 6, Thane, Navi Mumbai, Maharashtra - 400706
             </p>

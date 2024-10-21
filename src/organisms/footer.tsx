@@ -66,7 +66,7 @@ export default function Footer() {
         <div className="flex items-center gap-x-6 pt-5 md:pt-8 lg:pt-10 justify-between ">
           <div className="md:block hidden">
             <span className="text-sm font-medium text-white block text-opacity-30">
-              Copyright © 2024 Thrive Trail Private Limited
+              Copyright © 2024 Etribe Finance Private Limited
             </span>
           </div>
 
@@ -126,7 +126,7 @@ export default function Footer() {
 
         <div className="md:hidden block pt-5 ">
           <span className="text-[12px] font-regular text-white block text-opacity-30">
-            Copyright © 2024 Thrive Trail Private Limited
+            Copyright © 2024 Etribe Finance Private Limited
           </span>
         </div>
       </div>
@@ -189,7 +189,7 @@ function TextAnchor({
               </div>
               <div className="pt-8">
                 <span className="text-sm font-medium text-white block text-opacity-30">
-                  Copyright © 2024 Thrive Trail Private Limited
+                  Copyright © 2024 Etribe Finance Private Limited
                 </span>
               </div>
             </div>

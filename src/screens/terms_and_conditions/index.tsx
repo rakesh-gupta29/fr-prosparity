@@ -112,12 +112,12 @@ export default function PrivacyPolicy() {
           <div className="col-span-8 md:pl-3    content-wrapper">
             <h4 id="overview">Overview</h4>
             <p>
-              Thrive Trail Private Limited, whose registered office is situated
-              at Flat No. 904, Keystone Solista, Plot No. 6, Thane, Navi Mumbai,
-              Maharashtra - 400706 (hereinafter shall be referred to as
-              "ProsParity" or "Company" or "us" or "we" are the owner of the
-              mobile application by the name ProsParity ("App") and website at
-              www.prosparity.in ("Website") (App and Website are hereinafter
+              Etribe Finance Private Limited, whose registered office is
+              situated at Flat No. 904, Keystone Solista, Plot No. 6, Thane,
+              Navi Mumbai, Maharashtra - 400706 (hereinafter shall be referred
+              to as "ProsParity" or "Company" or "us" or "we" are the owner of
+              the mobile application by the name ProsParity ("App") and website
+              at www.prosparity.in ("Website") (App and Website are hereinafter
               together referred to as the "Platform").
             </p>
             <p>

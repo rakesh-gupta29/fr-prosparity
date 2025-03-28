@@ -6,7 +6,7 @@ import jitedra from 'assets/Jitendra Sharma.png'
 import hakam from 'assets/Hakam Dhakar.png'
 import sunil from 'assets/Sunil Dubey.png'
 import russel from 'assets/Russell Fernandez.png'
-import rahulPandey from "assets/rahulPandey.jpg"
+import rahulPandey from 'assets/rahulPandey.jpg'
 
 import anni from 'assets/anni.png'
 import { Dialog, Transition } from '@headlessui/react'
@@ -60,11 +60,11 @@ const teams = [
     profileURL: 'https://www.linkedin.com/in/sunil-dubey-aa121931a/',
   },
   {
-    "name": "Rahul Pandey",
-    "designation": "Lead, Credit Ops",
-    "coverImage":rahulPandey,
-    "desc": "Rahul brings deep expertise in credit and business operations, with a strong background in fintech and lending. Prior to joining ProsParity, he played a key role in co-lending operations at Stashfin, ensuring efficient execution and seamless partnerships. Before that, at BharatPe, he contributed to building and scaling lending finance, optimizing processes, and driving operational excellence.  As part of the Credit Ops team at ProsParity, Rahul is instrumental in driving the company's zero-to-one journey. He focuses on building and streamlining credit and business operations, ensuring compliance, efficiency, and innovation to create a scalable and robust financial\u00a0ecosystem.",
-    "profileURL": null
+    name: 'Rahul Pandey',
+    designation: 'Lead, Credit Ops',
+    coverImage: rahulPandey,
+    desc: "Rahul brings deep expertise in credit and business operations, with a strong background in fintech and lending. Prior to joining ProsParity, he played a key role in co-lending operations at Stashfin, ensuring efficient execution and seamless partnerships. Before that, at BharatPe, he contributed to building and scaling lending finance, optimizing processes, and driving operational excellence.  As part of the Credit Ops team at ProsParity, Rahul is instrumental in driving the company's zero-to-one journey. He focuses on building and streamlining credit and business operations, ensuring compliance, efficiency, and innovation to create a scalable and robust financial\u00a0ecosystem.",
+    profileURL: 'https://www.linkedin.com/in/rahul-pandey-871013194/',
   },
   {
     name: 'Russell Fernandez',

@@ -6,7 +6,7 @@ import jitedra from 'assets/Jitendra Sharma.png'
 import hakam from 'assets/Hakam Dhakar.png'
 import sunil from 'assets/Sunil Dubey.png'
 import russel from 'assets/Russell Fernandez.png'
-import rahulPandey from 'assets/rahulPandey.jpg'
+import rahulPandey from 'assets/rahulPandey.png'
 
 import anni from 'assets/anni.png'
 import { Dialog, Transition } from '@headlessui/react'

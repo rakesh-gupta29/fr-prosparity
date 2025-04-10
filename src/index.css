@@ -1,24 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: 'bold';
+  font-family: 'Manrope';
   src: url('assets/fonts/bold.woff2');
 }
 
 @font-face {
-  font-family: 'medium';
+  font-family: 'Manrope';
   src: url('assets/fonts/medium.woff2');
 }
 
 @font-face {
-  font-family: 'light';
+  font-family: 'Manrope';
   src: url('assets/fonts/light.woff2');
 }
 
 @font-face {
-  font-family: 'regular';
+  font-family: 'Manrope';
   src: url('assets/fonts/regular.woff2');
 }
 
@@ -154,4 +156,9 @@
 html,
 body {
   scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: 'Manrope', sans-serif;
+  font-optical-sizing: auto;
 }

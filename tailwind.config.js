@@ -35,10 +35,10 @@ module.exports = {
         1: '1px',
       },
       fontFamily: {
-        bold: ['bold', 'sans-serif'],
-        light: ['light', 'sans-serif'],
-        regular: ['regular', 'sans-serif'],
-        medium: ['medium', 'sans-serif'],
+        bold: ['Manrope', 'sans-serif'],
+        light: ['Manrope', 'sans-serif'],
+        regular: ['Manrope', 'sans-serif'],
+        medium: ['Manrope', 'sans-serif'],
       },
       gridColumn: {},
       animation: {
